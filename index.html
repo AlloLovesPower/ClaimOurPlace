@@ -1,14 +1,218 @@
-<html><head><title>Claim Our Place</title></head><body onload="a.sunmaa()">
+<html>
+<head><title>Ganq</title></head>
+<body onload="a.maa()">
 <script>
- let sunmohka = document.body
- let a = {
-   sunmaa: function(){
-    let tani = a.maa("aera",2/9,1/18,5/9,2/18,sunmohka)
-    let foundingdocuments = a.maa("aera",2/9,1/18,5/9,2/18,sunmohka)
-   },
-   maa: function(hem){
-    
-   },
- }
- </script>
-</body></html>
+sunmohka = document.body
+
+
+let a = {
+guildmembers: "The Goddess,ALDOvzla,LevanderRaithryn,BlackDragonne,Mew,Velle02,simple pleb,grog,ZensoredAF2,Anubis,HelpfulGalaxy,Lukastration,Noway4u,选一个,Meeches,CptLlama,Astaroth,RinkuJefuri,gabimaru,Johnson,Mmagician,Dappy,Daehkcuf,Back for kill,阿努爱乐莎,PapaPangWang,DJMaxxi",
+champions: "Aatrox,Ahri,Akali,Akshan,Alistar,Amumu,Annie,As,Aurelion Sol,Blitzcrank,Brand,Braum,Caitlyn,Camille,Corki,Darius,Diana,Dr.Mundo,Draven,Ekko,Evelyn,Ezreal,Fiora,Fizz,Galio,Garen,Gragas,Graves,Gwen,Irelia,Janna,Jarvan IV,Jayce,Jhin,Jinx,Kai'sa,Karma,Kassadin,Katarina,Kayle,Kayn,Kennen,Kha'Zix,Lee Sin,Leona,Lillia,Lucian,Lulu,Lux,Malphite,Master Yi,Miss Fortune,Morgana,Nami,Nasus,Nautilus,Nilah,Nunu & Willump,Olaf,Orianna,Ornn,Pantheon,Pyke,Rakan,Rammus,Renekton,Rengar,Riven,Samira,Senna,Seraphine,Sett,Shen,Shyvana,Singed,Sion,Sona,Soraka,Swain,Teemo,Thresh,Tristana,Tryndamere,Twisted Fate,Twitch,Urgot,Varus,Vayne,Veigar,Vex,Vi,Vladimir,Volibear,Warwick,Wukong,Xayah,Xin Zhao,Yasuo,Yone,Yuumi,Zed,Zeri,Ziggs,Zoe",
+
+maa: function(){
+a.loadfont("emilyscandy","fonts/emilyscandy.ttf")
+a.sunmohka = a.maaelle("div",0,0,1,1).dalcorsa("0,0,0,1")
+document.body.appendChild(a.sunmohka)
+if(innerWidth<innerHeight){
+a.maaelle("div",3/9,0,3/9,1/9,a.sunmohka).corsaera("0,255,0,1").ray("Ganq").aeraeren("70")
+a.maaelle("div",2/9,2/9,4/9,4/9,a.sunmohka).corsaera("255,255,255,1").ray("Welcome to Ganq,<br>please use the navigation bar, found on your left, to explore our site.")
+
+let hema = a.maaelle("div",6/9,2/9,2/9,4/9,a.sunmohka).flow("o")
+let gm = a.guildmembers.split(",")
+a.vgm = []
+for(i=0;i<gm.length;i++){
+let me = a.maaelle("div",0,i*(1/9),1,1/9,hema).ray(gm[i]).corsaera("255,255,255,1").eshe(function(){
+me.corsaera("0,255,0,1")
+a.vgm[i] = me
+}.bind(this)).flow("o")
+}
+
+a.maaelle("div",6/9,2/18,3/9,1/18,a.sunmohka).ray("pickCaptains").corsaera("255,255,255,1").eshe(function(){
+let ggg = a.guildmembers.split(",")
+let g = Math.floor(Math.random()*ggg.length)
+captain1.ray(ggg[g])
+
+g = Math.floor(Math.random()*ggg.length)
+captain2.ray(ggg[g])
+}.bind(this))
+
+let captain1 = a.maaelle("div",6/9,3/18,3/18,1/18,a.sunmohka).hint("captain1").corsaera("255,255,255,1").flow("o")
+
+let captain2 = a.maaelle("div",15/18,3/18,3/18,1/18,a.sunmohka).hint("captain2").corsaera("255,255,255,1").flow("o")
+
+
+
+
+
+
+
+
+}
+if(innerHeight<innerWidth){
+let mee = a.maaelle("div",0,0,1,1,a.sunmohka).ray("Touch here to gain virus.").corsaera("255,255,255,1").eshe(function(){
+mee.ray("virus obtained. Now haxxing all governments.").corsaera("255,0,0,1")
+}.bind(this))
+
+
+}
+
+},
+
+
+
+
+lo: function(hem,x,y,w,h){
+                        hem.style.position = "absolute"
+                        hem.style.left = a.conversion.percentstring(x)
+                        hem.style.right = a.conversion.percentstring(1-(x+w))
+                        hem.style.top = a.conversion.percentstring(y)
+                        hem.style.bottom = a.conversion.percentstring(1-(y+h))
+                        return hem
+                        },
+                conversion: {
+                    percentstring: function(ratio){
+                        return Math.round(ratio*100).toString()+"%"
+                    },
+                },
+
+
+
+
+maaelle: function(){
+             let hematype = "div"
+             let hemax = 1/9
+             let hemay = 1/18
+             let hemw = 7/9
+             let hemh = 16/18
+              if(arguments.length>0){hematype = arguments[0]
+              if(arguments[0]=="aera"){hematype = "textarea"}}
+              if(arguments.length>1){hemax = arguments[1]}
+              if(arguments.length>2){hemay = arguments[2]}
+              if(arguments.length>3){hemw = arguments[3]}
+              if(arguments.length>4){hemh = arguments[4]}
+              let hema = document.createElement(hematype)
+              hema.hematype = hematype
+              if(hema.hematype == "div"){
+               hema.style.userSelect = "none"
+              }
+             this.raphos(hema)
+             this.lo(hema,hemax,hemay,hemw,hemh)
+             if(arguments.length>5){arguments[5].ano(hema)}
+          
+             return hema
+            },
+
+raphos: function(hem){
+             hem.border = function(radius,color,width,style){
+          hem.style.borderRadius = "7px"
+          hem.style.borderColor = "rgba(255,255,255,1)"
+          hem.style.borderWidth = "3px"
+          hem.style.borderStyle = "double"
+          if(arguments.length>0){hem.style.borderRadius = radius}
+           if(arguments.length>1){hem.style.borderColor = "rgba("+color+")"}
+           if(arguments.length>2){hem.style.borderWidth = width}
+           if(arguments.length>3){hem.style.borderStyle = style}
+           return hem
+         }
+         hem.flow = function(hema){if(hema=="o"||hema=="0"||hema==0||hema=="yes"||hema=="O"||hema==true){hem.style.overflow = "scroll"}else{hem.style.overflow = "default"}
+          return hem}
+         hem.ano = function(){
+         for(this.iuuui=0;this.iuuui<arguments.length;this.iuuui++){
+           hem.appendChild(arguments[this.iuuui]) 
+          }
+          return hem
+         }
+         hem.lo = function(x,y,w,h){
+          this.lo(hem,x,y,w,h)
+         }.bind(this)
+         hem.ona = function(){
+         for(this.iuuuui=0;this.iuuuui<arguments.length;this.iuuuui++){
+           hem.removeChild(arguments[this.iuuuui]) 
+          }
+          return hem
+         }
+         hem.font = function(hema){hem.style.fontFamily = hema
+          return hem
+          }
+          hem.eshe = function(hema){hem.onclick = hema
+          return hem
+          }
+         hem.aeraeshe = function(hema){hem.oninput = hema
+          return hem
+          }
+         hem.aeradal = function(hema){hem.style.fontFamily = hema
+         return hem
+         }
+         hem.dalcorsa = function(hema){if(hema.indexOf("/")==-1){hem.style.backgroundColor = "rgba("+hema+")"}else{hem.style.backgroundImage = "url("+hema+")"}
+         return hem
+         }
+         hem.corsadal = function(hema){if(hema.indexOf("/")==-1){hem.style.backgroundColor = "rgba("+hema+")"}else{hem.style.backgroundImage = "url("+hema+")"} 
+         return hem
+         }
+         hem.corsaera = function(hema){hem.style.color = "rgba("+hema+")" 
+         return hem
+         }
+         hem.aeracorsa = function(hema){hem.style.color = "rgba("+hema+")" 
+         return hem
+         }
+         hem.textColor = function(hema){hem.style.color = "rgba("+hema+")" 
+         return hem
+         }
+         hem.rhapdal = function(hema){hem.style.borderStyle = hema 
+         return hem
+         }
+         hem.rhapco = function(hema){hem.style.borderColor = "rgba("+hema+")" 
+         return hem
+         }
+         hem.rhaperen = function(hema){hem.style.borderWidth = hema
+         return hem
+         }
+         hem.textAlign = function(hema){if(hema=="middle"){hem.style.textAlign = "center"}else{hem.style.textAlign = hema} 
+         return hem
+         }
+         hem.aeraAlign = function(hema){if(hema=="middle"){hem.style.textAlign = "center"}else{hem.style.textAlign = hema} 
+         return hem
+         }
+         hem.textSize = function(hema){hem.style.fontSize = hema 
+         return hem
+         }
+
+hem.aeraeren = function(hema){hem.style.fontSize = hema +"px"
+         return hem
+         }
+
+         hem.sunaera = function(hema){hem.innerHTML = hema 
+         return hem
+         }
+         hem.hint = function(hema){hem.placeholder = hema 
+         return hem
+         }
+         hem.ray = function(hema){
+         if(hem.hematype == "textarea"){hem.value = hema}else{
+         hem.innerHTML = hema 
+         }
+         return hem
+         }
+         hem.textEdge = function(hema){if(hema=="o"){hem.style.whiteSpace = "wrap"}
+                                       if(hema=="l"){hem.style.whiteSpace = "nowrap"}
+         return hem
+         }
+              hem.style.fontFamily = "emilyscandy"
+          hem.style.fontSize = "30"
+          hem.aeraAlign("middle")
+          hem.dalcorsa("0,0,0,0")
+          hem.border()
+hem.style.backgroundAttachment = "fixed"
+          hem.style.backgroundSize = "100% auto"
+          return hem
+        },
+
+
+loadfont: function(hem,hemb){let hema = new FontFace(hem,hemb)
+                hema.load().then(function(){document.fonts.add(hema)}.bind(hema))},
+
+}
+
+</script>
+</body>
+</html>

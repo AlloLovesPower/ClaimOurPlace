@@ -13,6 +13,27 @@ maa: function(){
 a.loadfont("emilyscandy","fonts/emilyscandy.ttf")
 a.sunmohka = a.maaelle("div",0,0,1,1).dalcorsa("0,0,0,1")
 document.body.appendChild(a.sunmohka)
+a.canvas = a.maaelle('canvas',0,0,1,1,a.sunmohka)
+a.canvas.width = innerWidth
+a.canvas.height = innerHeight
+a.brush = a.canvas.getContext("2d")
+a.brush.color = function(hem){
+a.brush.fillStyle = hem
+return a.brush
+}
+a.brush.color("rgb(255,255,255)")
+a.soa = function(){
+let r = Math.floor(Math.random()*37)+217
+let g = Math.floor(Math.random()*37)+217
+let b = Math.floor(Math.random()*37)+217
+a.brush.fillStyle = "rgb("+r+","+g+","+b+")"
+let x = Math.floor(Math.random()*innerWidth)
+let y = Math.floor(Math.random()*innerHeight)
+a.brush.fillRect(x,y,1,1)
+
+}
+a.soam = setInterval(function(){a.soa()},300)
+
 if(innerWidth<innerHeight){
 a.maaelle("div",3/9,0,3/9,1/9,a.sunmohka).corsaera("0,255,0,1").ray("Ganq").aeraeren("70")
 a.maaelle("div",2/9,2/9,4/9,4/9,a.sunmohka).corsaera("255,255,255,1").ray("Welcome to Ganq,<br>please use the navigation bar, found on your left, to explore our site.")

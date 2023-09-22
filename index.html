@@ -34,11 +34,51 @@ a.brush.fillRect(x,y,1,1)
 }
 a.soam = setInterval(function(){a.soa()},300)
 
-if(innerWidth<innerHeight){
-a.maaelle("div",3/9,0,3/9,1/9,a.sunmohka).corsaera("0,255,0,1").ray("Ganq").aeraeren("70")
-a.maaelle("div",2/9,2/9,4/9,4/9,a.sunmohka).corsaera("255,255,255,1").ray("Welcome to Ganq,<br>please use the navigation bar, found on your left, to explore our site.")
 
-let hema = a.maaelle("div",6/9,2/9,2/9,4/9,a.sunmohka).flow("o")
+
+a.soas = function(){
+let wut = Math.floor(Math.random()*4)
+a.sunmohka.dalcorsa("images/"+wut+".jpeg")
+}
+a.soams = setInterval(function(){a.soas()},7000)
+
+
+
+if(innerWidth<innerHeight){
+a.title = a.maaelle("div",3/9,0,3/9,1/9,a.sunmohka).corsaera("0,255,0,1").ray("Ganq").aeraeren("70")
+
+a.moh = a.maaelle("div",2/9,2/9,5/9,4/9,a.sunmohka).flow("o")
+
+
+
+a.description = a.maaelle("div",0,0,1,1,a.moh).corsaera("255,255,255,1").ray("Welcome to Ganq,<br>please use the navigation bar, found on your left, to explore our site.")
+
+a.lidescription = a.maaelle("div",0,4/18,1/9,1/18,a.sunmohka).corsaera("0,255,0,1").ray("Description").eshe(function(){
+a.moh.ona(a.moh.active)
+a.moh.activeli.corsaera("255,255,255,1")
+a.moh.active = a.description
+a.moh.activeli = a.lidescription
+a.moh.activeli.corsaera("0,255,0,1")
+a.moh.ano(a.moh.active)
+}.bind(this))
+
+a.moh.active = a.description
+a.moh.activeli = a.lidescription
+
+a.history = a.maaelle("div",0,0,1,1).corsaera("255,255,255,1").ray("prehistory,<br> LevanderRaithryn and The Goddess lose horribly together while both feeding and, amid complaining pugs, a friendship is formed.<br><br>The Goddess joins LevanderRaithryn's guild Ganq, which is largely inactive.<br><br>The Goddess notes to a friend that she lead a wow guild of 70 people as a child.<br><br>about two days later, Out of nowhere, leadership passes to The Goddess.<br>Levander is raised to first mate.<br>Daehkcuf is the only known active prehistoric ganq member beside Levander and second officer.<br>Meeches, an experienced Jhin, says they/he/she will join if given officer status.  The Goddess hunts Meeches, only person to actively want officer, down, and Meeches becomes 3rd of, currently 3, officers.  From 5 real active members, Ganq quickly grows to 27 active members in about a week.<br><br>The Goddess begins coding, and today, day1 of recorded Ganq history, gets the Ganq website started in public form and types this.")
+
+a.lihistory = a.maaelle("div",0,5/18,1/9,1/18,a.sunmohka).corsaera("255,255,255,1").ray("History").eshe(function(){
+a.moh.ona(a.moh.active)
+a.moh.activeli.corsaera("255,255,255,1")
+a.moh.active = a.history
+a.moh.activeli = a.lihistory
+a.moh.activeli.corsaera("0,255,0,1")
+a.moh.ano(a.moh.active)
+}.bind(this))
+
+
+
+let hema = a.maaelle("div",0,6/9,2/9,3/9,a.sunmohka).flow("o")
 let gm = a.guildmembers.split(",")
 a.vgm = []
 for(i=0;i<gm.length;i++){

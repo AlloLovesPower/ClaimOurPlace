@@ -33,6 +33,15 @@ let x = Math.floor(Math.random()*innerWidth)
 let y = Math.floor(Math.random()*innerHeight)
 a.brush.fillRect(x,y,1,1)
 
+
+ r = Math.floor(Math.random()*75)+180
+ g = Math.floor(Math.random()*75)+180
+ b = Math.floor(Math.random()*75)+180
+a.brush.fillStyle = "rgb("+r+","+g+","+b+")"
+ x = Math.floor(Math.random()*innerWidth)
+ y = Math.floor(Math.random()*innerHeight)
+a.brush.fillRect(x,y,2,2)
+
 }
 a.soam = setInterval(function(){a.soa()},300)
 
@@ -82,7 +91,7 @@ a.moh.ano(a.moh.active)
 
 
 
-a.tournament = a.maaelle("div",0,0,1,1).corsaera("255,255,255,1").ray("Tournament<br>")
+a.tournament = a.maaelle("div",0,0,1,1).corsaera("255,255,255,1")
 
 a.litournament = a.maaelle("div",0,6/18,2/9,1/18,a.sunmohka).vcenter().corsaera("255,255,255,1").ray("Tournament").eshe(function(){
 a.moh.ona(a.moh.active)
@@ -94,11 +103,23 @@ a.moh.ano(a.moh.active)
 }.bind(this))
 
 
+a.roster = a.maaelle("div",0,0,1,1).corsaera("255,255,255,1")
+
+a.liroster = a.maaelle("div",0,7/18,2/9,1/18,a.sunmohka).vcenter().corsaera("255,255,255,1").ray("Roster").eshe(function(){
+a.moh.ona(a.moh.active)
+a.moh.activeli.corsaera("255,255,255,1")
+a.moh.active = a.roster
+a.moh.activeli = a.liroster
+a.moh.activeli.corsaera("0,255,0,1")
+a.moh.ano(a.moh.active)
+}.bind(this))
 
 
 
 
-let hema = a.maaelle("div",0,6/9,2/9,3/9,a.sunmohka).flow("o").dalcorsa("0,0,0,0.5")
+
+
+let hema = a.maaelle("div",0,0,4/9,9/9,a.roster).flow("o").dalcorsa("0,0,0,0.5")
 let gm = a.guildmembers.split(",")
 a.vgm = []
 for(i=0;i<gm.length;i++){
@@ -108,18 +129,18 @@ a.vgm[i] = me
 }.bind(this)).flow("o")
 }
 
-a.maaelle("div",6/9,2/18,3/9,1/18,a.sunmohka).vcenter().ray("pickCaptains").corsaera("255,255,255,1").eshe(function(){
+a.maaelle("div",0,8/9,3/9,1/9,a.tournament).vcenter().ray("pickCaptains").corsaera("255,255,255,1").eshe(function(){
 let ggg = a.guildmembers.split(",")
 let g = Math.floor(Math.random()*ggg.length)
 captain1.ray(ggg[g])
 
 g = Math.floor(Math.random()*ggg.length)
 captain2.ray(ggg[g])
-}.bind(this)).dalcorsa("0,0,0,0.5")
+}.bind(this)).dalcorsa("0,255,0,0.1")
 
-let captain1 = a.maaelle("div",6/9,3/18,3/18,1/18,a.sunmohka).hint("captain1").corsaera("255,255,255,1").flow("o").dalcorsa("0,0,0,0.5")
+let captain1 = a.maaelle("div",3/9,8/9,3/9,1/9,a.tournament).hint("captain1").corsaera("255,255,255,1").flow("o").dalcorsa("0,0,0,0.5")
 
-let captain2 = a.maaelle("div",15/18,3/18,3/18,1/18,a.sunmohka).hint("captain2").corsaera("255,255,255,1").flow("o").dalcorsa("0,0,0,0.5")
+let captain2 = a.maaelle("div",6/9,8/9,3/9,1/9,a.tournament).hint("captain2").corsaera("255,255,255,1").flow("o").dalcorsa("0,0,0,0.5")
 
 
 
@@ -294,7 +315,7 @@ hem.style.backgroundAttachment = "fixed"
         },
 
 
-loadfont: function(hem,hemb){let hema = new FontFace(hem,hemb)
+loadfont: function(hem,hemb){let hema = new FontFace(hem,"url("+hemb+")")
                 hema.load().then(function(){document.fonts.add(hema)}.bind(hema))},
 
 }

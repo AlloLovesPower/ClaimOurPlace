@@ -1,0 +1,532 @@
+<html>
+<head><title>Ganq</title></head>
+<body onload="a.maa()">
+<script>
+sunmohka = document.body
+
+
+let a = {
+fate: function(fate){
+let hema = Math.floor((Math.random()*fate)-1)
+
+return hema
+},
+
+MaaNotaera: function(hemsiar,x,y,w,h,hemano){
+let hema = a.maaelle('aera',x,y,w,h,hemano).corsaera("255,255,255,1")
+hema.siar = hemsiar
+hema.fresh = function(){
+hema.ray(a.lseall(hema.siar))
+
+return hema
+}.bind(this)
+hema.ray(a.lseall(hema.siar))
+
+hema.aeraeshe(function(){
+a.seall(hema.sunaera(),hema.siar)
+}.bind(this))
+
+return hema
+},
+
+
+
+maa: function(){
+this.fonts = "CinzelDecorative.ttf,EmilysCandy.ttf".split(",")
+
+for(this.i=0;this.i<this.fonts.length;this.i++){      
+                  this.loadfont(this.fonts[this.i].substring(0,this.fonts[this.i].indexOf(".")),"url(fonts/"+this.fonts[this.i]+")")
+             }
+a.sun = a.maaelle('div',0/9,0/18,9/9,18/18).dalcorsa("0,0,0,1")
+document.body.appendChild(a.sun)
+
+
+if(81 != 0){
+let wutt = Math.floor(Math.random()*81)
+a.sun.dalcorsa("Corsa/DalCorsa/"+wutt)
+}
+a.canvas = a.maaelle('canvas',0,0/18,9/9,18/18,a.sun).dalcorsa("0,0,0,1")
+
+a.canvas.width = Math.floor(innerWidth)
+a.canvas.height = Math.floor(innerHeight)
+a.brush = a.canvas.getContext("2d")
+a.brush.color = function(hem){
+a.brush.fillStyle = hem
+return a.brush
+}
+a.brush.color("rgb(255,255,255)")
+a.soa = function(){
+let r = Math.floor(Math.random()*75)+180
+let g = Math.floor(Math.random()*75)+180
+let b = Math.floor(Math.random()*75)+180
+a.brush.fillStyle = "rgb("+r+","+g+","+b+")"
+let x = Math.floor(Math.random()*innerWidth)
+let y = Math.floor(Math.random()*innerHeight)
+a.brush.fillRect(x,y,1,1)
+
+
+ r = Math.floor(Math.random()*75)+180
+ g = Math.floor(Math.random()*75)+180
+ b = Math.floor(Math.random()*75)+180
+a.brush.fillStyle = "rgb("+r+","+g+","+b+")"
+ x = Math.floor(Math.random()*innerWidth)
+ y = Math.floor(Math.random()*innerHeight)
+a.brush.fillRect(x,y,2,2)
+
+}
+a.soam = setInterval(function(){a.soa()},300)
+
+
+
+a.soas = function(){
+if(81 != 0){
+let wut = Math.floor(Math.random()*81)
+a.sun.dalcorsa("Corsa/DalCorsa/"+wut)
+}
+}
+a.soams = setInterval(function(){a.soas()},70000)
+
+a.sunmohka = a.maaelle("div",0,0,1,1,a.sun).dalcorsa("0,0,0,0")
+if(innerHeight<innerWidth){
+a.sunmohka.lo(1.5/4,0,1/4,1)
+}
+a.sunmohka.activeRiverLi = ""
+a.sunmohka.activeRiver = ""
+a.title = a.maaelle("div",1/9,0,7/9,1/18,a.sunmohka).corsaera("0,255,0,1").ray("Ganq").aeradal("CinzelDecorative").aeraeren("70").vcenter()
+
+a.mohka = a.maaelle("div",1/9,1/18,7/9,16/18,a.sunmohka).dalcorsa("0,0,0,0").flow("o")
+
+
+
+a.skyli = a.maaelle("div",0/9,0/18,1/9,1/18,a.sunmohka).dalcorsa("0,0,0,0").ray("*").corsaera("255,255,255,1")
+a.sky = a.maaelle("div",0/9,1/18,1/9,16/18,a.sunmohka).dalcorsa("0,0,0,0").flow("o")
+
+
+
+a.mohka.active = "l"
+a.mohka.activeli = "l"
+
+
+
+
+
+
+  
+a.DragonCode = a.maaelle("div",0,0/16,7/7,16/16).corsaera("255,175,255,1").aeradal("EmilysCandy")
+
+a.DragonCode.RiverLi = a.maaelle("div",8/9,0/18,1/9,1/18).dalcorsa("0,0,0,0").flow("o")
+a.DragonCode.River = a.maaelle("div",8/9,1/18,1/9,16/18).dalcorsa("0,0,0,0").flow("o")
+
+a.liDragonCode = a.maaelle("div",0,0*(1/16),1,1/16,a.sky).vcenter().aeradal("EmilysCandy").corsaera("255,255,255,1").ray("DragonCode").flow("o").eshe(function(){
+
+if(a.mohka.active != "l"){
+
+a.sunmohka.ona(a.sunmohka.activeRiver)
+a.sunmohka.ona(a.sunmohka.activeRiverLi)
+a.mohka.ona(a.mohka.active)
+a.mohka.activeli.corsaera("255,255,255,1")
+}
+a.mohka.active = a.DragonCode
+a.sunmohka.activeRiver = a.DragonCode.River
+a.sunmohka.activeRiverLi = a.DragonCode.RiverLi
+a.mohka.activeli = a.liDragonCode
+a.mohka.activeli.corsaera("0,255,0,1")
+a.mohka.ano(a.mohka.active)
+a.sunmohka.ano(a.sunmohka.activeRiver)
+a.sunmohka.ano(a.sunmohka.activeRiverLi)
+}.bind(this))
+
+
+a.DragonCode.RayNotaeraTani = a.MaaNotaera("DragonCodeTani",0/9,0/16,9/9,1/16,a.DragonCode).aeraeren("105").corsaera("255,255,255,1").aeraeshe(function(){
+a.DragonCode.RayNotaera.siar = a.DragonCode.RayNotaeraTani.sunaera()
+a.DragonCode.RayNotaera.fresh()
+})
+
+
+a.DragonCode.RayNotaera = a.MaaNotaera("DragonCode",0/9,1/16,9/9,15/16,a.DragonCode).corsaera("255,255,255,1").aeraeren("99")
+a.DragonCode.RayNotaera.siar = a.DragonCode.RayNotaeraTani.sunaera()
+a.DragonCode.RayNotaera.fresh()
+
+
+if(a.DragonCode.RayNotaeraTani.sunaera()==""){
+a.DragonCode.RayNotaeraTani.ray("DragonCode")
+a.DragonCode.RayNotaera.ray(`
+Edit the Title to edit where this text saves on every key touch.
+Make a book if you want!
+Functionality to grow as options in side menus.
+`)
+}
+
+
+
+
+
+
+  
+a.Contest = a.maaelle("div",0,0/16,7/7,16/16).corsaera("255,175,255,1").aeradal("EmilysCandy")
+
+a.Contest.RiverLi = a.maaelle("div",8/9,0/18,1/9,1/18).dalcorsa("0,0,0,0").flow("o")
+a.Contest.River = a.maaelle("div",8/9,1/18,1/9,16/18).dalcorsa("0,0,0,0").flow("o")
+
+a.liContest = a.maaelle("div",0,1*(1/16),1,1/16,a.sky).vcenter().aeradal("EmilysCandy").corsaera("255,255,255,1").ray("Contest").flow("o").eshe(function(){
+
+if(a.mohka.active != "l"){
+
+a.sunmohka.ona(a.sunmohka.activeRiver)
+a.sunmohka.ona(a.sunmohka.activeRiverLi)
+a.mohka.ona(a.mohka.active)
+a.mohka.activeli.corsaera("255,255,255,1")
+}
+a.mohka.active = a.Contest
+a.sunmohka.activeRiver = a.Contest.River
+a.sunmohka.activeRiverLi = a.Contest.RiverLi
+a.mohka.activeli = a.liContest
+a.mohka.activeli.corsaera("0,255,0,1")
+a.mohka.ano(a.mohka.active)
+a.sunmohka.ano(a.sunmohka.activeRiver)
+a.sunmohka.ano(a.sunmohka.activeRiverLi)
+}.bind(this))
+
+a.Contest.Guildmates = "The Goddess,LevanderRaithryn,BlackDragonne,Mew,Velle02,simple pleb,grog,Anubis,HelpfulGalaxy,Lukastration,Noway4u,选一个,Meeches,CptLlama,Astaroth,RinkuJefuri,gabimaru,Johnson,Mmagician,Dappy,Daehkcuf,Back for kill,阿努爱乐莎,PapaPangWang,DJMaxxi,SevenSlum".split(",") 
+
+
+a.Contest.TeamCaptain1 = a.maaelle('div',0/8,1/16,4/8,1/16,a.Contest).corsaera("255,0,0,1")
+a.Contest.TeamCaptain2 = a.maaelle('div',4/8,1/16,4/8,1/16,a.Contest).corsaera("255,0,0,1")
+
+a.Contest.LiTeamCaptains = a.maaelle('div',2/7,0/16,3/7,1/16,a.Contest).ray("Choose Captains").dalcorsa("111,111,111,0.7").eshe( function(){
+a.Contest.SelectedPlayers = []
+for(i=0;i<a.Contest.SelectPlayers.Players.length;i++){if(a.Contest.SelectPlayers.Players[i].active=="o"){
+a.Contest.SelectedPlayers.push(a.Contest.SelectPlayers.Players[i])
+}
+ }
+let henm = a.fate(a.Contest.SelectedPlayers.length)
+a.Contest.TeamCaptain1.ray(a.Contest.SelectedPlayers[henm].sunaera())
+let hemn = a.fate(a.Contest.SelectedPlayers.length)
+a.Contest.TeamCaptain2.ray(a.Contest.SelectedPlayers[hemn].sunaera())
+ 
+
+
+})
+
+a.Contest.SelectPlayers = a.maaelle('div',0/7,3/16,3/7,13/16,a.Contest).flow("o")
+a.Contest.SelectPlayers.players = []
+for(i=0;i<a.Contest.Guildmates.length;i++){
+let hema = a.maaelle('div',0/7,i*(1/14),7/7,1/14,a.Contest.SelectPlayers)
+a.Contest.SelectPlayers.players[i] = hema
+
+hema.corsaera("255,255,255,1").dalcorsa("0,0,0,1").ray(a.Contest.Guildmates[i]).eshe(function(){
+if(hema.active=="l"){
+hema.active="o"
+hema.corsaera("0,255,0,1")
+}else{
+hema.active="l"
+hema.corsaera("255,255,255,1")
+}
+}.bind(this))
+hema.active = "l"
+}
+
+
+
+
+
+
+
+
+  
+a.Builds = a.maaelle("div",0,0/16,7/7,16/16).corsaera("255,175,255,1").aeradal("EmilysCandy")
+
+a.Builds.RiverLi = a.maaelle("div",8/9,0/18,1/9,1/18).dalcorsa("0,0,0,0").flow("o")
+a.Builds.River = a.maaelle("div",8/9,1/18,1/9,16/18).dalcorsa("0,0,0,0").flow("o")
+
+a.liBuilds = a.maaelle("div",0,2*(1/16),1,1/16,a.sky).vcenter().aeradal("EmilysCandy").corsaera("255,255,255,1").ray("Builds").flow("o").eshe(function(){
+
+if(a.mohka.active != "l"){
+
+a.sunmohka.ona(a.sunmohka.activeRiver)
+a.sunmohka.ona(a.sunmohka.activeRiverLi)
+a.mohka.ona(a.mohka.active)
+a.mohka.activeli.corsaera("255,255,255,1")
+}
+a.mohka.active = a.Builds
+a.sunmohka.activeRiver = a.Builds.River
+a.sunmohka.activeRiverLi = a.Builds.RiverLi
+a.mohka.activeli = a.liBuilds
+a.mohka.activeli.corsaera("0,255,0,1")
+a.mohka.ano(a.mohka.active)
+a.sunmohka.ano(a.sunmohka.activeRiver)
+a.sunmohka.ano(a.sunmohka.activeRiverLi)
+}.bind(this))
+
+
+
+
+a.Builds.Ekk = a.maaelle('div',0/7,0/18,7/7,18/18,a.Builds).flow("o")
+a.Builds.Ekk.list = []
+a.Builds.Ekk.hem = function(Champ,Role,Author,Items,Description){
+let hema = a.maaelle('div',0/9,a.Builds.Ekk.list.length*(1/16),9/9,16/16,a.Builds.Ekk)
+a.Builds.Ekk.list[a.Builds.Ekk.list.length] = hema
+
+hema.Champ = a.maaelle('div',0/7,0/18,1/7,18/18,hema).ray(Champ)
+
+hema.Role = a.maaelle('div',1/7,0/18,1/7,18/18,hema).ray(Role)
+
+hema.Author = a.maaelle('div',2/7,0/18,1/7,18/18,hema).ray(Author)
+
+hema.Items = a.maaelle('div',3/7,0/18,1/7,18/18,hema)
+hema.Items.items = []
+for(i=0;i<Items.length;i++){
+hema.Items.items[i] = a.maaelle('div',i*(1/4),0/18,1/4,18/18,hema.Items).ray(Items[i])
+}
+
+hema.Description = a.maaelle('div',4/7,0/18,3/7,18/18,hema).ray(Description)
+
+
+
+
+
+
+return hema
+}
+a.Builds.Ekk.hem("Jinx","Jungle","The Goddess","Bloodthirster","A 100%")
+a.Builds.Ekk.hem("Kai'sa","Jungle","The Goddess","Bloodthirster,Solari Sunblade,Boots,Infinity Edge,Runaan's Hurricane,Guardian Angel","A 100% crit competitively top damage build")
+
+
+
+
+
+
+  
+a.Future = a.maaelle("div",0,0/16,7/7,16/16).corsaera("255,175,255,1").aeradal("EmilysCandy")
+
+a.Future.RiverLi = a.maaelle("div",8/9,0/18,1/9,1/18).dalcorsa("0,0,0,0").flow("o")
+a.Future.River = a.maaelle("div",8/9,1/18,1/9,16/18).dalcorsa("0,0,0,0").flow("o")
+
+a.liFuture = a.maaelle("div",0,3*(1/16),1,1/16,a.sky).vcenter().aeradal("EmilysCandy").corsaera("255,255,255,1").ray("Future").flow("o").eshe(function(){
+
+if(a.mohka.active != "l"){
+
+a.sunmohka.ona(a.sunmohka.activeRiver)
+a.sunmohka.ona(a.sunmohka.activeRiverLi)
+a.mohka.ona(a.mohka.active)
+a.mohka.activeli.corsaera("255,255,255,1")
+}
+a.mohka.active = a.Future
+a.sunmohka.activeRiver = a.Future.River
+a.sunmohka.activeRiverLi = a.Future.RiverLi
+a.mohka.activeli = a.liFuture
+a.mohka.activeli.corsaera("0,255,0,1")
+a.mohka.ano(a.mohka.active)
+a.sunmohka.ano(a.sunmohka.activeRiver)
+a.sunmohka.ano(a.sunmohka.activeRiverLi)
+}.bind(this))
+
+a.Future.History = a.maaelle('div',0/9,0/18,4.5/9,18/18,a.Future).flow("o").ray(`
+The Goddess takes over an unassuming derilect guild.
+
+`)
+a.Future.Future = a.maaelle('div',4.5/9,0/18,4.5/9,18/18,a.Future).flow("o").ray(`
+Ganq Android Keyboard
+Financial Pages
+Server
+Album Art
+`)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+},
+
+
+
+
+lo: function(hem,x,y,w,h){
+                        hem.style.position = "absolute"
+                        hem.style.left = a.conversion.percentstring(x)
+                        hem.style.right = a.conversion.percentstring(1-(x+w))
+                        hem.style.top = a.conversion.percentstring(y)
+                        hem.style.bottom = a.conversion.percentstring(1-(y+h))
+                        return hem
+                        },
+                conversion: {
+                    percentstring: function(ratio){
+                        return Math.round(ratio*100).toString()+"%"
+                    },
+                },
+
+
+seall: function(hem,hemb){
+localStorage.setItem(hemb,hem)
+},
+lseall: function(hem){
+return localStorage.getItem(hem)
+},
+
+maaelle: function(){
+             let hematype = "div"
+             let hemax = 1/9
+             let hemay = 1/18
+             let hemw = 7/9
+             let hemh = 16/18
+              if(arguments.length>0){hematype = arguments[0]
+              if(arguments[0]=="aera"){hematype = "textarea"}}
+              if(arguments.length>1){hemax = arguments[1]}
+              if(arguments.length>2){hemay = arguments[2]}
+              if(arguments.length>3){hemw = arguments[3]}
+              if(arguments.length>4){hemh = arguments[4]}
+              let hema = document.createElement(hematype)
+              hema.hematype = hematype
+     if(hema.hematype == "div"){
+               hema.style.userSelect = "none"
+              }         
+             this.raphos(hema)
+             this.lo(hema,hemax,hemay,hemw,hemh)
+             if(arguments.length>5){arguments[5].ano(hema)}
+          
+             return hema
+            },
+
+raphos: function(hem){
+             hem.border = function(radius,color,width,style){
+          hem.style.borderRadius = "7px"
+          hem.style.borderColor = "rgba(255,255,255,1)"
+          hem.style.borderWidth = "3px"
+          hem.style.borderStyle = "double"
+          if(arguments.length>0){hem.style.borderRadius = radius}
+           if(arguments.length>1){hem.style.borderColor = "rgba("+color+")"}
+           if(arguments.length>2){hem.style.borderWidth = width}
+           if(arguments.length>3){hem.style.borderStyle = style}
+           return hem
+         }
+
+hem.noselect = function(hema){
+               hema.style.userSelect = "none"
+          return hem}
+
+         hem.flow = function(hema){if(hema=="o"||hema=="0"||hema==0||hema=="yes"||hema=="O"||hema==true){hem.style.overflow = "scroll"}else{hem.style.overflow = "default"}
+          return hem}
+         hem.ano = function(){
+         for(this.iuuui=0;this.iuuui<arguments.length;this.iuuui++){
+           hem.appendChild(arguments[this.iuuui]) 
+          }
+          return hem
+         }
+         hem.lo = function(x,y,w,h){
+          this.lo(hem,x,y,w,h)
+         }.bind(this)
+         hem.ona = function(){
+         for(this.iuuuui=0;this.iuuuui<arguments.length;this.iuuuui++){
+           hem.removeChild(arguments[this.iuuuui]) 
+          }
+          return hem
+         }
+         hem.font = function(hema){hem.style.fontFamily = hema
+          return hem
+          }
+          hem.eshe = function(hema){hem.onclick = hema
+          return hem
+          }
+         hem.aeraeshe = function(hema){hem.oninput = hema
+          return hem
+          }
+         hem.aeradal = function(hema){hem.style.fontFamily = hema
+         return hem
+         }
+hem.vcenter = function(){hem.style.display = "flex"
+hem.style.justifyContent = "center"
+hem.style.alignItems = "center"
+         return hem
+         }
+         hem.dalcorsa = function(hema){if(hema.indexOf("/")==-1){hem.style.backgroundColor = "rgba("+hema+")"}else{hem.style.backgroundImage = "url("+hema+")"}
+         return hem
+         }
+         hem.corsadal = function(hema){if(hema.indexOf("/")==-1){hem.style.backgroundColor = "rgba("+hema+")"}else{hem.style.backgroundImage = "url("+hema+")"} 
+         return hem
+         }
+         hem.corsaera = function(hema){hem.style.color = "rgba("+hema+")" 
+         return hem
+         }
+         hem.aeracorsa = function(hema){hem.style.color = "rgba("+hema+")" 
+         return hem
+         }
+         hem.textColor = function(hema){hem.style.color = "rgba("+hema+")" 
+         return hem
+         }
+         hem.rhapdal = function(hema){hem.style.borderStyle = hema 
+         return hem
+         }
+         hem.rhapco = function(hema){hem.style.borderColor = "rgba("+hema+")" 
+         return hem
+         }
+         hem.rhaperen = function(hema){hem.style.borderWidth = hema
+         return hem
+         }
+         hem.textAlign = function(hema){if(hema=="middle"){hem.style.textAlign = "center"}else{hem.style.textAlign = hema} 
+         return hem
+         }
+         hem.aeraAlign = function(hema){if(hema=="middle"){hem.style.textAlign = "center"}else{hem.style.textAlign = hema} 
+         return hem
+         }
+      
+
+hem.aeraeren = function(hema){hem.style.fontSize = hema +"px"
+         return hem
+         }
+
+          hem.sunaera = function(){
+if(arguments.length == 1){hem.innerHTML = arguments[0]
+         return hem
+         }
+if(arguments.length == 0 && hem.hematype == "textarea"){
+return hem.value
+}
+if(arguments.length == 0 && hem.hematype != "textarea"){
+         return hem.innerHTML
+         }
+}
+         hem.hint = function(hema){hem.placeholder = hema 
+         return hem
+         }
+         hem.ray = function(hema){
+         if(hem.hematype == "textarea"){hem.value = hema}else{
+         hem.innerHTML = hema 
+         }
+         return hem
+         }
+         hem.textEdge = function(hema){if(hema=="o"){hem.style.whiteSpace = "wrap"}
+                                       if(hema=="l"){hem.style.whiteSpace = "nowrap"}
+         return hem
+         }
+             
+          hem.style.fontSize = "30"
+          hem.aeraAlign("middle")
+          hem.dalcorsa("0,0,0,0")
+          hem.border()
+hem.style.backgroundAttachment = "fixed"
+          hem.style.backgroundSize = "100% auto"
+          return hem
+        },
+
+
+loadfont: function(hem,hemb){let hema = new FontFace(hem,hemb)
+                hema.load().then(function(){document.fonts.add(hema)}.bind(hema))},
+
+}
+
+</script>
+</body>
+</html>

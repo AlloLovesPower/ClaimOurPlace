@@ -29,9 +29,10 @@ a.seall(hema.sunaera(),hema.siar)
 return hema
 },
 
-
+vDalCorsa: [],
 
 maa: function(){
+a.vDalCorsa = "033023_amumu_skin01.jpg,Aatrox_Skin01.jpg,Aatrox_Skin02.jpg,Aatrox_Skin04.jpg,Ahri_Skin01.jpg,Ahri_Skin02.jpg,Ahri_Skin03.jpg,Ahri_Skin04.jpg,Ahri_Skin05.jpg,Ahri_Skin06.jpg,Ahri_Skin07.jpg,Ahri_Skin08.jpg,Ahri_Skin09.jpg,akali_skin01.jpg,akali_skin02.jpg,akali_skin03.jpg,Akshan_Skin01_splash.jpg,Akshan_Skin02_splash.jpg,alistar_skin01.jpg,alistar_skin02.jpg,alistar_skin03.jpg,Alistar_Skin04.jpg,amumu_skin02.jpg,amumu_skin03.jpg,Amumu_Skin04.jpg,annie_skin01.jpg,annie_skin02.jpg,annie_skin03.jpg,Annie_Skin04.jpg,Annie_Skin09.jpg,ashe_skin01.jpg,ashe_skin02.jpg,ashe_skin03.jpg,Ashe_Skin04.jpg,aurelionsol_skin01.jpg,aurelionsol_skin02.jpg,aurelionsol_skin03.jpg,blitzcrank_skin01.jpg,blitzcrank_skin02.jpg,blitzcrank_skin03.jpg,Brand_Skin01.jpg,Brand_Skin02.jpg,Brand_Skin03.jpg,braum_skin01.jpg,braum_skin02.jpg,braum_skin03.jpg,Braum_Skin04.jpg,Caitlyn_Skin01_splash.jpg,Caitlyn_Skin02_splash.jpg,Caitlyn_Skin05.jpg,camille_skin01.jpg,camille_skin02.jpg,camille_skin03.jpg,Corki_Skin01.jpg,Corki_Skin02.jpg,Corki_Skin03.jpg,Darius_Skin01.jpg,Darius_Skin02.jpg,Darius_Skin03.jpg,Diana_Skin01_(1).jpg,Diana_Skin02_(1).jpg,Diana_Skin03_(1).jpg,Diana_Skin04.jpg,Diana_Skin05.jpg,Diana_Skin06.jpg,Diana_Skin07.jpg,Diana_Skin08.jpg,Draven_Skin01.jpg,Draven_Skin02.jpg,Draven_Skin03.jpg,Draven_Skin07.jpg,DrMundo-rework-splash_Skin01.jpg,wp3844324.jpg,DrMundo-rework-splash_Skin02.jpg,DrMundo-rework-splash_Skin03.jpg,DrMundo-rework-splash_Skin04.jpg,Ekko_Skin01_splash.jpg,Ekko_Skin02_splash.jpg,evelynn_skin01.jpg,evelynn_skin02.jpg,evelynn_skin03.jpg".split(",")
 this.fonts = "CinzelDecorative.ttf,EmilysCandy.ttf".split(",")
 
 for(this.i=0;this.i<this.fonts.length;this.i++){      
@@ -43,7 +44,7 @@ document.body.appendChild(a.sun)
 
 if(81 != 0){
 let wutt = Math.floor(Math.random()*81)
-a.sun.dalcorsa("Corsa/DalCorsa/"+this.Hypophany.bimgss[wutt])
+a.sun.dalcorsa("Corsa/DalCorsa/"+a.vDalCorsa[wutt])
 }
 a.canvas = a.maaelle('canvas',0,0/18,9/9,18/18,a.sun).dalcorsa("0,0,0,0")
 
@@ -81,7 +82,7 @@ a.soam = setInterval(function(){a.soa()},300)
 a.soas = function(){
 if(81 != 0){
 let wut = Math.floor(Math.random()*81)
-a.sun.dalcorsa("Corsa/DalCorsa/"+this.Hypophany.bimgss[wut])
+a.sun.dalcorsa("Corsa/DalCorsa/"+a.vDalCorsa[wut])
 }
 }
 a.soams = setInterval(function(){a.soas()},70000)
@@ -114,13 +115,52 @@ a.mohka.activeli = "l"
 
 
   
+a.Music = a.maaelle("div",0,0/16,7/7,16/16).corsaera("255,175,255,1").aeradal("EmilysCandy")
+
+a.Music.RiverLiLe = a.maaelle("div",8/9,0/18,1/9,1/18).dalcorsa("0,0,0,0").flow("o")
+a.Music.RiverLiPh = a.maaelle("div",8/9,17/18,1/9,1/18).dalcorsa("0,0,0,0").flow("o")
+a.Music.River = a.maaelle("div",8/9,1/18,1/9,16/18).dalcorsa("0,0,0,0").flow("o")
+
+a.liMusic = a.maaelle("div",0,0*(1/16),1,1/16,a.sky).vcenter().aeradal("EmilysCandy").corsaera("255,255,255,1").ray("Music").flow("o").eshe(function(){
+
+if(a.mohka.active != "l"){
+
+a.sunmohka.ona(a.sunmohka.activeRiver)
+a.sunmohka.ona(a.sunmohka.activeRiverLiLe)
+a.sunmohka.ona(a.sunmohka.activeRiverLiPh)
+a.mohka.ona(a.mohka.active)
+a.mohka.activeli.corsaera("255,255,255,1")
+}
+a.mohka.active = a.Music
+a.sunmohka.activeRiver = a.Music.River
+a.sunmohka.activeRiverLiPh = a.Music.RiverLiPh
+a.sunmohka.activeRiverLiLe = a.Music.RiverLiLe
+a.mohka.activeli = a.liMusic
+a.mohka.activeli.corsaera("0,255,0,1")
+a.mohka.ano(a.mohka.active)
+a.sunmohka.ano(a.sunmohka.activeRiver)
+a.sunmohka.ano(a.sunmohka.activeRiverLiLe)
+a.sunmohka.ano(a.sunmohka.activeRiverLiPh)
+}.bind(this))
+
+a.Music.Description = a.maaelle('div',0/9,0/18,9/9,10/18,a.Music).ray(`
+Ganq has Two outlets for Songs, GanqHard and GanqLight.
+
+
+`).corsaera("245,245,73,1")
+
+
+
+
+
+  
 a.DragonCode = a.maaelle("div",0,0/16,7/7,16/16).corsaera("255,175,255,1").aeradal("EmilysCandy")
 
 a.DragonCode.RiverLiLe = a.maaelle("div",8/9,0/18,1/9,1/18).dalcorsa("0,0,0,0").flow("o")
 a.DragonCode.RiverLiPh = a.maaelle("div",8/9,17/18,1/9,1/18).dalcorsa("0,0,0,0").flow("o")
 a.DragonCode.River = a.maaelle("div",8/9,1/18,1/9,16/18).dalcorsa("0,0,0,0").flow("o")
 
-a.liDragonCode = a.maaelle("div",0,0*(1/16),1,1/16,a.sky).vcenter().aeradal("EmilysCandy").corsaera("255,255,255,1").ray("DragonCode").flow("o").eshe(function(){
+a.liDragonCode = a.maaelle("div",0,1*(1/16),1,1/16,a.sky).vcenter().aeradal("EmilysCandy").corsaera("255,255,255,1").ray("DragonCode").flow("o").eshe(function(){
 
 if(a.mohka.active != "l"){
 
@@ -143,13 +183,13 @@ a.sunmohka.ano(a.sunmohka.activeRiverLiPh)
 }.bind(this))
 
 
-a.DragonCode.RayNotaeraTani = a.MaaNotaera("DragonCodeTani",0/9,0/16,9/9,1/16,a.DragonCode).aeraeren("90").corsaera("255,255,255,1").aeraeshe(function(){
+a.DragonCode.RayNotaeraTani = a.MaaNotaera("DragonCodeTani",0/9,0/16,9/9,1/16,a.DragonCode).corsaera("255,255,255,1").aeraeshe(function(){
 a.DragonCode.RayNotaera.siar = a.DragonCode.RayNotaeraTani.sunaera()
 a.DragonCode.RayNotaera.fresh()
 })
 
 
-a.DragonCode.RayNotaera = a.MaaNotaera("DragonCode",0/9,1/16,9/9,15/16,a.DragonCode).corsaera("255,255,255,1").aeraeren("80")
+a.DragonCode.RayNotaera = a.MaaNotaera("DragonCode",0/9,1/16,9/9,15/16,a.DragonCode).corsaera("255,255,255,1")
 a.DragonCode.RayNotaera.siar = a.DragonCode.RayNotaeraTani.sunaera()
 a.DragonCode.RayNotaera.fresh()
 
@@ -175,7 +215,7 @@ a.Contest.RiverLiLe = a.maaelle("div",8/9,0/18,1/9,1/18).dalcorsa("0,0,0,0").flo
 a.Contest.RiverLiPh = a.maaelle("div",8/9,17/18,1/9,1/18).dalcorsa("0,0,0,0").flow("o")
 a.Contest.River = a.maaelle("div",8/9,1/18,1/9,16/18).dalcorsa("0,0,0,0").flow("o")
 
-a.liContest = a.maaelle("div",0,1*(1/16),1,1/16,a.sky).vcenter().aeradal("EmilysCandy").corsaera("255,255,255,1").ray("Contest").flow("o").eshe(function(){
+a.liContest = a.maaelle("div",0,2*(1/16),1,1/16,a.sky).vcenter().aeradal("EmilysCandy").corsaera("255,255,255,1").ray("Contest").flow("o").eshe(function(){
 
 if(a.mohka.active != "l"){
 
@@ -250,7 +290,7 @@ a.Builds.RiverLiLe = a.maaelle("div",8/9,0/18,1/9,1/18).dalcorsa("0,0,0,0").flow
 a.Builds.RiverLiPh = a.maaelle("div",8/9,17/18,1/9,1/18).dalcorsa("0,0,0,0").flow("o")
 a.Builds.River = a.maaelle("div",8/9,1/18,1/9,16/18).dalcorsa("0,0,0,0").flow("o")
 
-a.liBuilds = a.maaelle("div",0,2*(1/16),1,1/16,a.sky).vcenter().aeradal("EmilysCandy").corsaera("255,255,255,1").ray("Builds").flow("o").eshe(function(){
+a.liBuilds = a.maaelle("div",0,3*(1/16),1,1/16,a.sky).vcenter().aeradal("EmilysCandy").corsaera("255,255,255,1").ray("Builds").flow("o").eshe(function(){
 
 if(a.mohka.active != "l"){
 
@@ -281,19 +321,19 @@ a.Builds.Ekk.hem = function(Champ,Role,Author,Items,Description){
 let hema = a.maaelle('div',0/9,a.Builds.Ekk.list.length*(1/16),9/9,16/16,a.Builds.Ekk)
 a.Builds.Ekk.list[a.Builds.Ekk.list.length] = hema
 
-hema.Champ = a.maaelle('div',0/7,0/18,1/7,18/18,hema).ray(Champ)
+hema.Champ = a.maaelle('div',0/7,0/18,2/7,18/18,hema).ray(Champ)
 
-hema.Role = a.maaelle('div',1/7,0/18,1/7,18/18,hema).ray(Role)
+hema.Role = a.maaelle('div',2/7,0/18,1/7,18/18,hema).ray(Role)
 
-hema.Author = a.maaelle('div',2/7,0/18,1/7,18/18,hema).ray(Author)
+hema.Author = a.maaelle('div',3/7,0/18,1/7,18/18,hema).ray(Author)
 
-hema.Items = a.maaelle('div',3/7,0/18,1/7,18/18,hema)
+hema.Items = a.maaelle('div',4/7,0/18,13/7,18/18,hema)
 hema.Items.items = []
 for(i=0;i<Items.length;i++){
-hema.Items.items[i] = a.maaelle('div',i*(1/4),0/18,1/4,18/18,hema.Items).ray(Items[i])
+hema.Items.items[i] = a.maaelle('div',i*(1/6),0/18,1/6,18/18,hema.Items).ray(Items[i])
 }
 
-hema.Description = a.maaelle('div',4/7,0/18,3/7,18/18,hema).ray(Description)
+hema.Description = a.maaelle('div',17/7,0/18,5/7,18/18,hema).flow("o").ray(Description)
 
 
 
@@ -302,8 +342,8 @@ hema.Description = a.maaelle('div',4/7,0/18,3/7,18/18,hema).ray(Description)
 
 return hema
 }
-a.Builds.Ekk.hem("Jinx","Jungle","The Goddess","Bloodthirster","A 100%")
-a.Builds.Ekk.hem("Kai'sa","Jungle","The Goddess","Bloodthirster,Solari Sunblade,Boots,Infinity Edge,Runaan's Hurricane,Guardian Angel","A 100% crit competitively top damage build")
+a.Builds.Ekk.hem("Jinx","Jungle","The Goddess",["Bloodthirster"],":)")
+a.Builds.Ekk.hem("Kai'sa","Jungle","The Goddess",["Bloodthirster","Solari Sunblade","Boots","Infinity Edge","Runaan's Hurricane","Guardian Angel"],"My only build for my main.")
 
 
 
@@ -317,7 +357,7 @@ a.Future.RiverLiLe = a.maaelle("div",8/9,0/18,1/9,1/18).dalcorsa("0,0,0,0").flow
 a.Future.RiverLiPh = a.maaelle("div",8/9,17/18,1/9,1/18).dalcorsa("0,0,0,0").flow("o")
 a.Future.River = a.maaelle("div",8/9,1/18,1/9,16/18).dalcorsa("0,0,0,0").flow("o")
 
-a.liFuture = a.maaelle("div",0,3*(1/16),1,1/16,a.sky).vcenter().aeradal("EmilysCandy").corsaera("255,255,255,1").ray("Future").flow("o").eshe(function(){
+a.liFuture = a.maaelle("div",0,4*(1/16),1,1/16,a.sky).vcenter().aeradal("EmilysCandy").corsaera("255,255,255,1").ray("Future").flow("o").eshe(function(){
 
 if(a.mohka.active != "l"){
 
@@ -339,16 +379,32 @@ a.sunmohka.ano(a.sunmohka.activeRiverLiLe)
 a.sunmohka.ano(a.sunmohka.activeRiverLiPh)
 }.bind(this))
 
-a.Future.History = a.maaelle('div',0/9,0/18,4.5/9,18/18,a.Future).flow("o").ray(`
-The Goddess takes over an unassuming derilect guild.
+a.Future.History = a.maaelle('div',0/9,0/18,4.5/9,18/18,a.Future).flow("o")
+a.Future.History.Events = []
+a.Future.History.hem = function(hem){
+let hema = this.maaelle('div',0/7,a.Future.History.Events.length*(1/16),7/7,1/16,a.Future.History).ray(hem)
+a.Future.History.Events.push(hema)
 
-`)
-a.Future.Future = a.maaelle('div',4.5/9,0/18,4.5/9,18/18,a.Future).flow("o").ray(`
-Ganq Android Keyboard
-Financial Pages
-Server
-Album Art
-`)
+return hema
+}.bind(this)
+
+
+a.Future.Future = a.maaelle('div',4.5/9,0/18,4.5/9,18/18,a.Future).flow("o")
+a.Future.Future.Events = []
+a.Future.Future.hem = function(hem){
+let hema = a.maaelle('div',0/7,a.Future.Future.Events.length*(1/16),7/7,1/16,a.Future.Future).ray(hem)
+a.Future.Future.Events.push(hema)
+
+return hema
+}.bind(this)
+
+
+a.Future.Future.hem("Ganq")
+a.Future.Future.hem("Android Keyboard")
+a.Future.Future.hem("Financial Pages")
+a.Future.Future.hem("Server")
+a.Future.Future.hem("Album Art")
+
 
 
 
@@ -412,7 +468,7 @@ maaelle: function(){
                hema.style.userSelect = "none"
               }         
              this.raphos(hema)
-     hema::-webkit-scrollbar{display:none;}     
+         
 this.lo(hema,hemax,hemay,hemw,hemh)
              if(arguments.length>5){arguments[5].ano(hema)}
           

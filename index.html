@@ -43,7 +43,7 @@ document.body.appendChild(a.sun)
 
 if(81 != 0){
 let wutt = Math.floor(Math.random()*81)
-a.sun.dalcorsa("Corsa/DalCorsa/"+wutt)
+a.sun.dalcorsa("Corsa/DalCorsa/"+this.Hypophany.bimgss[wutt])
 }
 a.canvas = a.maaelle('canvas',0,0/18,9/9,18/18,a.sun).dalcorsa("0,0,0,0")
 
@@ -81,7 +81,7 @@ a.soam = setInterval(function(){a.soa()},300)
 a.soas = function(){
 if(81 != 0){
 let wut = Math.floor(Math.random()*81)
-a.sun.dalcorsa("Corsa/DalCorsa/"+wut)
+a.sun.dalcorsa("Corsa/DalCorsa/"+this.Hypophany.bimgss[wut])
 }
 }
 a.soams = setInterval(function(){a.soas()},70000)
@@ -394,7 +394,7 @@ maaelle: function(){
                hema.style.userSelect = "none"
               }         
              this.raphos(hema)
-             this.lo(hema,hemax,hemay,hemw,hemh)
+     hema::-webkit-scrollbar{display:none;}     this.lo(hema,hemax,hemay,hemw,hemh)
              if(arguments.length>5){arguments[5].ano(hema)}
           
              return hema

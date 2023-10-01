@@ -167,6 +167,7 @@ a.Music.GanqLightTani = a.maaelle('div',5/9,2/18,4/9,1/18,a.Music).ray("GanqLigh
 a.Music.GanqLight = a.maaelle('div',5/9,3/18,4/9,5/18,a.Music).corsaera("42,191,103,1").dalcorsa("23,16,33,0.4")
 a.Music.GanqLight.Vere = []
 a.Music.GanqLight.hem = function(hem){
+
 let hema = a.maaelle('div',1/9,a.Music.GanqLight.Vere.length*(1/6),7/9,1/6,a.Music.GanqLight).ray(hem).eshe(function(){
 a.Music.AudioPlayer.src = "SunVere/"+hem+".mp3"
 }.bind(this))
@@ -356,7 +357,7 @@ hema.Items = a.maaelle('div',4/7,0,3/7,18/18,hema)
 hema.Items.items = []
 for(i=0;i<Items.length;i++){
 hema.Items.items[i] = a.maaelle('div',i*(1/6),0/18,1/6,18/18,hema.Items).dalcorsa("Corsa/Items/"+Items[i]+".png")
-hema.Items.items[i].dalcorsaeren("100% 100%")
+hema.Items.items[i].dalcorsaeren("contain")
 }
 
 hema.Description = a.maaelle('div',7/7,0/18,5/7,18/18,hema).flow("o").ray(Description)

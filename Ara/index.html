@@ -32,7 +32,7 @@ return hema
 vDalCorsa: [],
 
 maa: function(){
-a.vDalCorsa = "index.html".split(",")
+a.vDalCorsa = "index.html,Ara.jpg".split(",")
 this.fonts = "CinzelDecorative.ttf,EmilysCandy.ttf".split(",")
 
 for(this.i=0;this.i<this.fonts.length;this.i++){      
@@ -42,8 +42,8 @@ a.sun = a.maaelle('div',0/9,0/18,9/9,18/18).dalcorsa("0,0,0,1")
 document.body.appendChild(a.sun)
 
 
-if(1 != 0){
-let wutt = Math.floor(Math.random()*1)
+if(2 != 0){
+let wutt = Math.floor(Math.random()*2)
 a.sun.dalcorsa("Corsa/DalCorsa/"+a.vDalCorsa[wutt])
 }
 a.canvas = a.maaelle('canvas',0,0/18,9/9,18/18,a.sun).dalcorsa("0,0,0,0")
@@ -80,8 +80,8 @@ a.soam = setInterval(function(){a.soa()},300)
 
 
 a.soas = function(){
-if(1 != 0){
-let wut = Math.floor(Math.random()*1)
+if(2 != 0){
+let wut = Math.floor(Math.random()*2)
 a.sun.dalcorsa("Corsa/DalCorsa/"+a.vDalCorsa[wut])
 }
 }

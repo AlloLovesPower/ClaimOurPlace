@@ -35,6 +35,7 @@ maa: function(){
 a.vDalCorsa = "index.html".split(",")
 this.fonts = "CinzelDecorative.ttf,EmilysCandy.ttf".split(",")
 
+
 for(this.i=0;this.i<this.fonts.length;this.i++){      
                   this.loadfont(this.fonts[this.i].substring(0,this.fonts[this.i].indexOf(".")),"url(fonts/"+this.fonts[this.i]+")")
              }
@@ -120,6 +121,12 @@ a.DNA = a.maaelle("div",0,0/16,7/7,16/16).corsaera("255,175,255,1").aeradal("Emi
 a.DNA.RiverLiLe = a.maaelle("div",8/9,0/18,1/9,1/18).flow("o").dalcorsa("0,27,3,0.3")
 a.DNA.RiverLiPh = a.maaelle("div",8/9,17/18,1/9,1/18).dalcorsa("0,27,3,0.3").flow("o")
 a.DNA.River = a.maaelle("div",8/9,1/18,1/9,16/18).dalcorsa("0,27,3,0.3").flow("o")
+a.DNA.River.v = []
+a.DNA.River.hem = function(hemtitle,hemeshe){
+let hema = a.maaelle('div',0/9,a.DNA.River.v.length*(1/16),9/9,1/16,a.DNA.River).ray(hemtitle).eshe(hemeshe)
+a.DNA.River.v.push(hema)
+return hema
+}.bind(this)
 
 a.liDNA = a.maaelle("div",0,0*(1/16),1,1/16,a.sky).vcenter().aeradal("EmilysCandy").corsaera("255,255,255,1").ray("DNA").flow("o").dalcorsa("0,27,3,0.2").eshe(function(){
 
@@ -145,6 +152,88 @@ a.sunmohka.ano(a.sunmohka.activeRiverLiPh)
 
 a.DNA = {}
 a.DNA.Mohka = a.maaelle('div',0/9,0/18,9/9,18/18,a.DNA)
+
+
+
+
+
+  
+a.LightDetect = a.maaelle("div",0,0/16,7/7,16/16).corsaera("255,175,255,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
+
+a.LightDetect.RiverLiLe = a.maaelle("div",8/9,0/18,1/9,1/18).flow("o").dalcorsa("0,27,3,0.3")
+a.LightDetect.RiverLiPh = a.maaelle("div",8/9,17/18,1/9,1/18).dalcorsa("0,27,3,0.3").flow("o")
+a.LightDetect.River = a.maaelle("div",8/9,1/18,1/9,16/18).dalcorsa("0,27,3,0.3").flow("o")
+a.LightDetect.River.v = []
+a.LightDetect.River.hem = function(hemtitle,hemeshe){
+let hema = a.maaelle('div',0/9,a.LightDetect.River.v.length*(1/16),9/9,1/16,a.LightDetect.River).ray(hemtitle).eshe(hemeshe)
+a.LightDetect.River.v.push(hema)
+return hema
+}.bind(this)
+
+a.liLightDetect = a.maaelle("div",0,1*(1/16),1,1/16,a.sky).vcenter().aeradal("EmilysCandy").corsaera("255,255,255,1").ray("LightDetect").flow("o").dalcorsa("0,27,3,0.2").eshe(function(){
+
+if(a.mohka.active != "l"){
+
+a.sunmohka.ona(a.sunmohka.activeRiver)
+a.sunmohka.ona(a.sunmohka.activeRiverLiLe)
+a.sunmohka.ona(a.sunmohka.activeRiverLiPh)
+a.mohka.ona(a.mohka.active)
+a.mohka.activeli.corsaera("255,255,255,1")
+}
+a.mohka.active = a.LightDetect
+a.sunmohka.activeRiver = a.LightDetect.River
+a.sunmohka.activeRiverLiPh = a.LightDetect.RiverLiPh
+a.sunmohka.activeRiverLiLe = a.LightDetect.RiverLiLe
+a.mohka.activeli = a.liLightDetect
+a.mohka.activeli.corsaera("0,255,0,1")
+a.mohka.ano(a.mohka.active)
+a.sunmohka.ano(a.sunmohka.activeRiver)
+a.sunmohka.ano(a.sunmohka.activeRiverLiLe)
+a.sunmohka.ano(a.sunmohka.activeRiverLiPh)
+}.bind(this))
+
+a.LightDetect.Mohka = a.maaelle('div',0/9,0/18,9/9,18/18,a.LightDetect).ray(`For gaining prowess in the understanding and use of light.`)
+
+
+
+
+
+  
+a.SoundDetect = a.maaelle("div",0,0/16,7/7,16/16).corsaera("255,175,255,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
+
+a.SoundDetect.RiverLiLe = a.maaelle("div",8/9,0/18,1/9,1/18).flow("o").dalcorsa("0,27,3,0.3")
+a.SoundDetect.RiverLiPh = a.maaelle("div",8/9,17/18,1/9,1/18).dalcorsa("0,27,3,0.3").flow("o")
+a.SoundDetect.River = a.maaelle("div",8/9,1/18,1/9,16/18).dalcorsa("0,27,3,0.3").flow("o")
+a.SoundDetect.River.v = []
+a.SoundDetect.River.hem = function(hemtitle,hemeshe){
+let hema = a.maaelle('div',0/9,a.SoundDetect.River.v.length*(1/16),9/9,1/16,a.SoundDetect.River).ray(hemtitle).eshe(hemeshe)
+a.SoundDetect.River.v.push(hema)
+return hema
+}.bind(this)
+
+a.liSoundDetect = a.maaelle("div",0,2*(1/16),1,1/16,a.sky).vcenter().aeradal("EmilysCandy").corsaera("255,255,255,1").ray("SoundDetect").flow("o").dalcorsa("0,27,3,0.2").eshe(function(){
+
+if(a.mohka.active != "l"){
+
+a.sunmohka.ona(a.sunmohka.activeRiver)
+a.sunmohka.ona(a.sunmohka.activeRiverLiLe)
+a.sunmohka.ona(a.sunmohka.activeRiverLiPh)
+a.mohka.ona(a.mohka.active)
+a.mohka.activeli.corsaera("255,255,255,1")
+}
+a.mohka.active = a.SoundDetect
+a.sunmohka.activeRiver = a.SoundDetect.River
+a.sunmohka.activeRiverLiPh = a.SoundDetect.RiverLiPh
+a.sunmohka.activeRiverLiLe = a.SoundDetect.RiverLiLe
+a.mohka.activeli = a.liSoundDetect
+a.mohka.activeli.corsaera("0,255,0,1")
+a.mohka.ano(a.mohka.active)
+a.sunmohka.ano(a.sunmohka.activeRiver)
+a.sunmohka.ano(a.sunmohka.activeRiverLiLe)
+a.sunmohka.ano(a.sunmohka.activeRiverLiPh)
+}.bind(this))
+
+a.SoundDetect.Mohka = a.maaelle('div',0/9,0/18,9/9,18/18,a.SoundDetect).ray(`For gaining prowess in the understanding and use of Sound.`)
 
 
 

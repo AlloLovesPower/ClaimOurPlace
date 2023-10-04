@@ -116,11 +116,17 @@ a.mohka.activeli = "l"
 
 
   
-a.Music = a.maaelle("div",0,0/16,7/7,16/16).corsaera("13,148,13,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
+a.Music = a.maaelle("div",0,0/16,7/7,16/16).corsaera("255,175,255,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
 
 a.Music.RiverLiLe = a.maaelle("div",8/9,0/18,1/9,1/18).flow("o").dalcorsa("0,27,3,0.3")
 a.Music.RiverLiPh = a.maaelle("div",8/9,17/18,1/9,1/18).dalcorsa("0,27,3,0.3").flow("o")
 a.Music.River = a.maaelle("div",8/9,1/18,1/9,16/18).dalcorsa("0,27,3,0.3").flow("o")
+a.Music.River.v = []
+a.Music.River.hem = function(hemtitle,hemeshe){
+let hema = a.maaelle('div',0/9,a.Music.River.v.length*(1/16),9/9,1/16,a.Music.River).ray(hemtitle).eshe(hemeshe)
+a.Music.River.v.push(hema)
+return hema
+}.bind(this)
 
 a.liMusic = a.maaelle("div",0,0*(1/16),1,1/16,a.sky).vcenter().aeradal("EmilysCandy").corsaera("255,255,255,1").ray("Music").flow("o").dalcorsa("0,27,3,0.2").eshe(function(){
 
@@ -186,11 +192,17 @@ a.Music.GanqLight.hem("Sunrise4Everyone")
 
 
   
-a.Contest = a.maaelle("div",0,0/16,7/7,16/16).corsaera("13,148,13,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
+a.Contest = a.maaelle("div",0,0/16,7/7,16/16).corsaera("255,175,255,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
 
 a.Contest.RiverLiLe = a.maaelle("div",8/9,0/18,1/9,1/18).flow("o").dalcorsa("0,27,3,0.3")
 a.Contest.RiverLiPh = a.maaelle("div",8/9,17/18,1/9,1/18).dalcorsa("0,27,3,0.3").flow("o")
 a.Contest.River = a.maaelle("div",8/9,1/18,1/9,16/18).dalcorsa("0,27,3,0.3").flow("o")
+a.Contest.River.v = []
+a.Contest.River.hem = function(hemtitle,hemeshe){
+let hema = a.maaelle('div',0/9,a.Contest.River.v.length*(1/16),9/9,1/16,a.Contest.River).ray(hemtitle).eshe(hemeshe)
+a.Contest.River.v.push(hema)
+return hema
+}.bind(this)
 
 a.liContest = a.maaelle("div",0,1*(1/16),1,1/16,a.sky).vcenter().aeradal("EmilysCandy").corsaera("255,255,255,1").ray("Contest").flow("o").dalcorsa("0,27,3,0.2").eshe(function(){
 
@@ -245,7 +257,7 @@ Prizes unknown but Between 50$ and 100$ initially for the Month and little prize
 Royalties should support prizes.
 
 
-`).flow("o")
+`).flow("o").dalcorsa("0,0,0,0.8")
 
 a.Contest.SelectPlayers = a.maaelle('div',0/7,3/16,3/7,13/16,a.Contest).flow("o")
 a.Contest.SelectPlayers.Players = []
@@ -273,11 +285,17 @@ hema.active = "l"
 
 
   
-a.Builds = a.maaelle("div",0,0/16,7/7,16/16).corsaera("13,148,13,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
+a.Builds = a.maaelle("div",0,0/16,7/7,16/16).corsaera("255,175,255,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
 
 a.Builds.RiverLiLe = a.maaelle("div",8/9,0/18,1/9,1/18).flow("o").dalcorsa("0,27,3,0.3")
 a.Builds.RiverLiPh = a.maaelle("div",8/9,17/18,1/9,1/18).dalcorsa("0,27,3,0.3").flow("o")
 a.Builds.River = a.maaelle("div",8/9,1/18,1/9,16/18).dalcorsa("0,27,3,0.3").flow("o")
+a.Builds.River.v = []
+a.Builds.River.hem = function(hemtitle,hemeshe){
+let hema = a.maaelle('div',0/9,a.Builds.River.v.length*(1/16),9/9,1/16,a.Builds.River).ray(hemtitle).eshe(hemeshe)
+a.Builds.River.v.push(hema)
+return hema
+}.bind(this)
 
 a.liBuilds = a.maaelle("div",0,2*(1/16),1,1/16,a.sky).vcenter().aeradal("EmilysCandy").corsaera("255,255,255,1").ray("Builds").flow("o").dalcorsa("0,27,3,0.2").eshe(function(){
 
@@ -343,11 +361,17 @@ a.Builds.Ekk.hem("Sona","Support","The Goddess",["TearOfTheGoddess","IonianBoots
 
 
   
-a.Code = a.maaelle("div",0,0/16,7/7,16/16).corsaera("13,148,13,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
+a.Code = a.maaelle("div",0,0/16,7/7,16/16).corsaera("255,175,255,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
 
 a.Code.RiverLiLe = a.maaelle("div",8/9,0/18,1/9,1/18).flow("o").dalcorsa("0,27,3,0.3")
 a.Code.RiverLiPh = a.maaelle("div",8/9,17/18,1/9,1/18).dalcorsa("0,27,3,0.3").flow("o")
 a.Code.River = a.maaelle("div",8/9,1/18,1/9,16/18).dalcorsa("0,27,3,0.3").flow("o")
+a.Code.River.v = []
+a.Code.River.hem = function(hemtitle,hemeshe){
+let hema = a.maaelle('div',0/9,a.Code.River.v.length*(1/16),9/9,1/16,a.Code.River).ray(hemtitle).eshe(hemeshe)
+a.Code.River.v.push(hema)
+return hema
+}.bind(this)
 
 a.liCode = a.maaelle("div",0,3*(1/16),1,1/16,a.sky).vcenter().aeradal("EmilysCandy").corsaera("255,255,255,1").ray("Code").flow("o").dalcorsa("0,27,3,0.2").eshe(function(){
 
@@ -372,12 +396,23 @@ a.sunmohka.ano(a.sunmohka.activeRiverLiPh)
 }.bind(this))
 
 
+a.Code.HemTani  = a.MaaNotaera("HemTani",0/9,13/18,2/9,1/18,a.Code)
 
-a.Code.River.hem = function(){
-let hema = {}
+a.Code.HemEshe  = a.MaaNotaera("HemEshe",2/9,13/18,6/9,4/18,a.Code)
 
-return hema
-}.bind(this)
+a.Code.HemKoLi  = a.maaelle("div",2/9,13/18,6/9,4/18,a.Code).ray("Create").eshe(function(){
+let codeshe = a.Code.HemEshe.sunaera()
+a.Code.River.hem(a.Code.HemTani.sunaera(), function(){
+let hemtext = a.Code.RayNotaera.sunaera()
+let hemnotaera = hemtext.substring(0,a.Code.RayNotaera.selectionStart)+codeshe+hemtext.substring(a.Code.RayNotaera.selectionStart,hemtext.length)
+
+a.Code.RayNotaera.ray(hemnotaera)
+
+
+}.bind(this))
+}.bind(this))
+
+
 
 a.Code.RayNotaera  = a.MaaNotaera("RayNotaera",0/9,0/18,9/9,13/18,a.Code).flow("o").dalcorsa("46,9,89,0.7").corsaera("138,255,192,1").hint(`Type notes here and they are saved to your Browser. :)
 

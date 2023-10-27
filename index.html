@@ -130,7 +130,7 @@ a.GuildMembers = ["The Goddess","Mew","raven","MagisterNegi","Velle02","simple p
 
 
   
-a.Music = a.maaelle("div",0,0/16,7/7,16/16).corsaera("255,175,255,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
+a.Music = a.maaelle("div",0,0/16,7/7,16/16).corsaera("1,255,255,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
 
 a.Music.RiverLiLe = a.maaelle("div",8/9,0/18,1/9,1/18).flow("o").dalcorsa("0,27,3,0.3")
 a.Music.RiverLiPh = a.maaelle("div",8/9,17/18,1/9,1/18).dalcorsa("0,27,3,0.3").flow("o")
@@ -194,12 +194,15 @@ a.Music.GanqLight.hem = function(hem){
 
 let hema = a.maaelle('div',1/9,a.Music.GanqLight.Vere.length*(1/6),7/9,1/6,a.Music.GanqLight).aeraeren("33").corsaera("15,52,214,1").ray(hem).eshe(function(){
 a.Music.AudioPlayer.src = "SunVere/"+hem+".mp3"
+
 a.Music.GanqLight.dalcorsa("Corsa/GanqLight/"+hem+".png")
+
 }.bind(this))
 a.Music.GanqLight.Vere.push(hema)
 return hema
 }.bind(this)
 a.Music.GanqLight.hem("Sunrise4Everyone") 
+
 a.Music.GanqLight.hem("Earth is Home")
 
 a.Music.Descriptionia = a.maaelle('div',0/9,9/18,9/9,2/18,a.Music).aeraeren("33").ray(`
@@ -240,10 +243,8 @@ a.Music.rito.hem("UnleashTheFire")
 
 
 
-
-
   
-a.Hi = a.maaelle("div",0,0/16,7/7,16/16).corsaera("255,175,255,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
+a.Hi = a.maaelle("div",0,0/16,7/7,16/16).corsaera("1,255,255,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
 
 a.Hi.RiverLiLe = a.maaelle("div",8/9,0/18,1/9,1/18).flow("o").dalcorsa("0,27,3,0.3")
 a.Hi.RiverLiPh = a.maaelle("div",8/9,17/18,1/9,1/18).dalcorsa("0,27,3,0.3").flow("o")
@@ -304,7 +305,7 @@ expect like 2 cents at first<br>
 
 
   
-a.Game = a.maaelle("div",0,0/16,7/7,16/16).corsaera("255,175,255,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
+a.Game = a.maaelle("div",0,0/16,7/7,16/16).corsaera("1,255,255,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
 
 a.Game.RiverLiLe = a.maaelle("div",8/9,0/18,1/9,1/18).flow("o").dalcorsa("0,27,3,0.3")
 a.Game.RiverLiPh = a.maaelle("div",8/9,17/18,1/9,1/18).dalcorsa("0,27,3,0.3").flow("o")
@@ -338,17 +339,24 @@ a.sunmohka.ano(a.sunmohka.activeRiverLiLe)
 a.sunmohka.ano(a.sunmohka.activeRiverLiPh)
 }.bind(this))
 
-if(2
+if(a.lseall("characters").indexOf("$%$")!=-1){
+a.Game.new()
+
+}
 
 
-a.Game.
+a.Game.new = function(){
+let hema = {}
+
+return hema
+}.bind(this)
 
 
 
 
 
   
-a.Government = a.maaelle("div",0,0/16,7/7,16/16).corsaera("255,175,255,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
+a.Government = a.maaelle("div",0,0/16,7/7,16/16).corsaera("1,255,255,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
 
 a.Government.RiverLiLe = a.maaelle("div",8/9,0/18,1/9,1/18).flow("o").dalcorsa("0,27,3,0.3")
 a.Government.RiverLiPh = a.maaelle("div",8/9,17/18,1/9,1/18).dalcorsa("0,27,3,0.3").flow("o")
@@ -389,7 +397,7 @@ a.sunmohka.ano(a.sunmohka.activeRiverLiPh)
 
 
   
-a.Players = a.maaelle("div",0,0/16,7/7,16/16).corsaera("255,175,255,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
+a.Players = a.maaelle("div",0,0/16,7/7,16/16).corsaera("1,255,255,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
 
 a.Players.RiverLiLe = a.maaelle("div",8/9,0/18,1/9,1/18).flow("o").dalcorsa("0,27,3,0.3")
 a.Players.RiverLiPh = a.maaelle("div",8/9,17/18,1/9,1/18).dalcorsa("0,27,3,0.3").flow("o")

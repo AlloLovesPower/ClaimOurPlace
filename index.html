@@ -121,7 +121,7 @@ a.sky = a.maaelle("div",0/9,1/18,1/9,16/18,a.sunmohka).dalcorsa("0,27,3,0.3").fl
 a.mohka.active = "l"
 a.mohka.activeli = "l"
 
-a.GuildMembers = ["The Goddess","Mew","raven","MagisterNegi","Velle02","simple pleb","LevanderRaithryn","Im MiMi","BlackDragonne","Yoyowilliamxu","QcLeonaQcPower","nookiepooh12","zigf27","Yugrey","BabyZeldris","Noway4u","JIUSTER70","Anubis","Landon2","PapaPangWang","HelpfulGalaxy","Daehkcuf","Alvarock90","SlevenSlum","CptLlama","Trollardinho","Astaroth","Only yasuo OTP","RinkuJefuri","phantom","ayez","Johnson","Mmagician","The Newt Tooter","Icarus the Moist","LEMONKUSSH","monicazh","Bambustus","SORRYCAME","SUCMYNUTZXD","GLOCO","kooploops"]
+a.GuildMembers = ["The Goddess","Mew","raven","MagisterNegi","Velle02","simple pleb","LevanderRaithryn","Im MiMi","BlackDragonne","Yoyowilliamxu","QcLeonaQcPower","zigf27","Yugrey","BabyZeldris","Noway4u","JIUSTER70","Anubis","PapaPangWang","HelpfulGalaxy","Daehkcuf","Alvarock90","SlevenSlum","CptLlama","Trollardinho","Astaroth","Only yasuo OTP","RinkuJefuri","phantom","ayez","Johnson","Mmagician","The Newt Tooter","Icarus the Moist","LEMONKUSSH","monicazh","Bambustus","SORRYCAME","SUCMYNUTZXD","GLOCO","kooploops"]
 
 
 
@@ -327,9 +327,9 @@ a.sunmohka.ano(a.sunmohka.activeRiverLiPh)
 
 a.Game.character = a.maaelle('div',0/9,0/18,9/9,1/18).ray(a.lseall("character"))
 a.Game.optionsMohka = a.maaelle('div',0/9,12/18,9/9,6/18,a.Game)
-a.Game.options1 = a.maaelle('div',0/9,0/18,3/9,18/18,a.Game.optionsMohka)
-a.Game.options2 = a.maaelle('div',3/9,0/18,3/9,18/18,a.Game.optionsMohka)
-a.Game.options3 = a.maaelle('div',6/9,0/18,3/9,18/18,a.Game.optionsMohka)
+a.Game.options1 = a.maaelle('div',0/9,0/18,3/9,18/18,a.Game.optionsMohka).dalcorsa("0,0,0,0.7")
+a.Game.options2 = a.maaelle('div',3/9,0/18,3/9,18/18,a.Game.optionsMohka).dalcorsa("0,0,0,0.7")
+a.Game.options3 = a.maaelle('div',6/9,0/18,3/9,18/18,a.Game.optionsMohka).dalcorsa("0,0,0,0.7")
 
 a.Game.new = function(){
 let choice1 = a.fate(a.GuildMembers.length)
@@ -347,21 +347,21 @@ let hema = a.maaelle('div',0/9,0/18,9/9,18/18,hemano)
 hema.tani  = a.maaelle('div',0/9,0/18,9/9,1/6,hema).ray(hemtani)
 
 
-hema.strengthtani  = a.maaelle('div',0/9,1/6,1/4,1/6,hema).ray("Strength")
+hema.strengthtani  = a.maaelle('div',0/9,1/6,1/4,1/6,hema).ray("Str")
 
 hema.strength  = a.maaelle('div',1/4,1/6,1/4,1/6,hema).ray(a.fate(500))
 
 
-hema.intelligencetani  = a.maaelle('div',2/4,1/6,1/4,1/6,hema).ray("Intelligence")
+hema.intelligencetani  = a.maaelle('div',2/4,1/6,1/4,1/6,hema).ray("Int")
 
 hema.intelligence  = a.maaelle('div',3/4,1/6,1/4,1/6,hema).ray(a.fate(500))
 
-hema.agilitytani  = a.maaelle('div',0/9,2/6,1/4,1/6,hema).ray("Agility")
+hema.agilitytani  = a.maaelle('div',0/9,2/6,1/4,1/6,hema).ray("Agi")
 
 hema.agility  = a.maaelle('div',1/4,2/6,1/4,1/6,hema).ray(a.fate(500))
 
 
-hema.charismatani  = a.maaelle('div',2/4,2/6,1/4,1/6,hema).ray("Charisma")
+hema.charismatani  = a.maaelle('div',2/4,2/6,1/4,1/6,hema).ray("Cha")
 
 hema.charisma  = a.maaelle('div',3/4,2/6,1/4,1/6,hema).ray(a.fate(500))
 
@@ -379,8 +379,11 @@ hema.aura  = a.maaelle('div',3/4,3/6,1/4,1/6,hema).ray("aura")
 
 hema.descriptionbox = a.maaelle('div',0/9,4/6,9/9,2/6,hema)
 
-
-
+hema.red = a.fate(255)
+hema.green = a.fate(255)
+hema.blue = a.fate(255)
+hema.color = hema.red +","+hema.green+","+hema.blue+",1"
+hema.rhapcorsa(hema.color)
 
 
 

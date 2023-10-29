@@ -326,10 +326,10 @@ a.sunmohka.ano(a.sunmohka.activeRiverLiPh)
 }.bind(this))
 
 a.Game.character = a.maaelle('div',0/9,0/18,9/9,1/18).ray(a.lseall("character"))
-a.Game.optionsMohka = this.maaelle('div',0/9,12/18,9/9,6/18,a.Game)
+a.Game.optionsMohka = a.maaelle('div',0/9,12/18,9/9,6/18,a.Game)
 a.Game.options1 = a.maaelle('div',0/9,0/18,3/9,18/18,a.Game.optionsMohka)
-a.Game.options2 = this.maaelle('div',3/9,0/18,3/9,18/18,a.Game.optionsMohka)
-a.Game.options3 = this.maaelle('div',6/9,0/18,3/9,18/18,a.Game.optionsMohka)
+a.Game.options2 = a.maaelle('div',3/9,0/18,3/9,18/18,a.Game.optionsMohka)
+a.Game.options3 = a.maaelle('div',6/9,0/18,3/9,18/18,a.Game.optionsMohka)
 
 a.Game.new = function(){
 let choice1 = a.fate(a.GuildMembers.length)
@@ -344,7 +344,7 @@ a.Game.MaaCharacter(a.GuildMembers[choice3],a.Game.options3)
 
 a.Game.MaaCharacter = function(hemtani,hemano){
 let hema = a.maaelle('div',0/9,0/18,9/9,18/18,hemano)
-hema.tani  = this.maaelle('div',0/9,0/18,9/9,1/6,hema).ray(hemtani)
+hema.tani  = a.maaelle('div',0/9,0/18,9/9,1/6,hema).ray(hemtani)
 
 return hema
 }.bind(this)

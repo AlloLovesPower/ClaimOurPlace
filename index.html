@@ -130,7 +130,7 @@ a.GuildMembers = ["The Goddess","Mew","raven","MagisterNegi","Velle02","simple p
 
 
   
-a.Music = a.maaelle("div",0,0/16,7/7,16/16).corsaera("1,255,255,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
+a.Music = a.maaelle("div",0,0/16,7/7,16/16).corsaera("17,255,255,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
 
 a.Music.RiverLiLe = a.maaelle("div",8/9,0/18,1/9,1/18).flow("o").dalcorsa("0,27,3,0.3")
 a.Music.RiverLiPh = a.maaelle("div",8/9,17/18,1/9,1/18).dalcorsa("0,27,3,0.3").flow("o")
@@ -244,7 +244,7 @@ a.Music.rito.hem("UnleashTheFire")
 
 
   
-a.Hi = a.maaelle("div",0,0/16,7/7,16/16).corsaera("1,255,255,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
+a.Hi = a.maaelle("div",0,0/16,7/7,16/16).corsaera("17,255,255,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
 
 a.Hi.RiverLiLe = a.maaelle("div",8/9,0/18,1/9,1/18).flow("o").dalcorsa("0,27,3,0.3")
 a.Hi.RiverLiPh = a.maaelle("div",8/9,17/18,1/9,1/18).dalcorsa("0,27,3,0.3").flow("o")
@@ -305,7 +305,7 @@ expect like 2 cents at first<br>
 
 
   
-a.Game = a.maaelle("div",0,0/16,7/7,16/16).corsaera("1,255,255,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
+a.Game = a.maaelle("div",0,0/16,7/7,16/16).corsaera("17,255,255,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
 
 a.Game.RiverLiLe = a.maaelle("div",8/9,0/18,1/9,1/18).flow("o").dalcorsa("0,27,3,0.3")
 a.Game.RiverLiPh = a.maaelle("div",8/9,17/18,1/9,1/18).dalcorsa("0,27,3,0.3").flow("o")
@@ -339,12 +339,27 @@ a.sunmohka.ano(a.sunmohka.activeRiverLiLe)
 a.sunmohka.ano(a.sunmohka.activeRiverLiPh)
 }.bind(this))
 
-a.Game.character = a.maaelle('div',0/9,0/18,9/9,16/18).ray(a.lseall("character"))
-
+a.Game.character = a.maaelle('div',0/9,0/18,9/9,1/18).ray(a.lseall("character"))
+a.Game.optionsMohka = this.maaelle('div',0/9,12/18,9/9,6/18,a.Game)
+a.Game.options1 = a.maaelle('div',0/9,0/18,3/9,18/18,a.Game.optionsMohka)
+a.Game.options2 = this.maaelle('div',3/9,0/18,3/9,18/18,a.Game.optionsMohka)
+a.Game.options3 = this.maaelle('div',6/9,0/18,3/9,18/18,a.Game.optionsMohka)
 
 a.Game.new = function(){
-let hema = {}
+let choice1 = a.fate(a.GuildMembers.length)
+let choice2 = a.fate(a.GuildMembers.length)
+let choice3 = a.fate(a.GuildMembers.length)
+a.Game.MaaCharacter(a.GuildMembers[choice1],a.Game.options1)
+a.Game.MaaCharacter(a.GuildMembers[choice2],a.Game.options2)
+a.Game.MaaCharacter(a.GuildMembers[choice3],a.Game.options3)
 
+}.bind(this)
+
+
+a.Game.MaaCharacter = function(hemtani,hemano){
+hemano.ray("")
+let hema = a.maaelle('div',0/9,0/18,9/9,18/18,hemano)
+hema.tani  = this.maaelle('div',0/9,0/18,9/9,1/6,hema).ray(hemtani)
 return hema
 }.bind(this)
 
@@ -353,7 +368,7 @@ return hema
 
 
   
-a.Government = a.maaelle("div",0,0/16,7/7,16/16).corsaera("1,255,255,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
+a.Government = a.maaelle("div",0,0/16,7/7,16/16).corsaera("17,255,255,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
 
 a.Government.RiverLiLe = a.maaelle("div",8/9,0/18,1/9,1/18).flow("o").dalcorsa("0,27,3,0.3")
 a.Government.RiverLiPh = a.maaelle("div",8/9,17/18,1/9,1/18).dalcorsa("0,27,3,0.3").flow("o")
@@ -394,7 +409,7 @@ a.sunmohka.ano(a.sunmohka.activeRiverLiPh)
 
 
   
-a.Players = a.maaelle("div",0,0/16,7/7,16/16).corsaera("1,255,255,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
+a.Players = a.maaelle("div",0,0/16,7/7,16/16).corsaera("17,255,255,1").aeradal("EmilysCandy").dalcorsa("0,27,3,0.3")
 
 a.Players.RiverLiLe = a.maaelle("div",8/9,0/18,1/9,1/18).flow("o").dalcorsa("0,27,3,0.3")
 a.Players.RiverLiPh = a.maaelle("div",8/9,17/18,1/9,1/18).dalcorsa("0,27,3,0.3").flow("o")
@@ -515,6 +530,39 @@ raphos: function(hem){
            if(arguments.length>3){hem.style.borderStyle = style}
            return hem
          }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1027,9 +1075,111 @@ hem.dalcorsaliscroll = function(){hem.style.backgroundAttachment = "local"
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 hem.aeraglow = function(hema){hem.style.textShadow = "0px 0px 4px rgba(" + hema +")"
          return hem
          }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

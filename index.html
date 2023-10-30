@@ -344,36 +344,55 @@ a.Game.MaaCharacter(a.GuildMembers[choice3],a.Game.options3)
 
 a.Game.MaaCharacter = function(hemtani,hemano){
 let hema = a.maaelle('div',0/9,0/18,9/9,18/18,hemano)
-hema.tani  = a.maaelle('div',0/9,0/12,9/9,1/12,hema).ray(hemtani)
-
-hema.image  = a.maaelle('div',0,1/12,1,4/12,hema).dalcorsa("Corsa/Guildmembers/"+hemtani+".png").dalcorsascroll()
-
-
-hema.str = a.maaelle('div',0,5/12,1/2,1/12,hema).ray("Str = "+a.fate(500))
-
-hema.int  = a.maaelle('div',1/2,5/12,1/2,1/12,hema).ray("Int = "+a.fate(500))
-
-hema.agi  = a.maaelle('div',0,6/12,1/2,1/12,hema).ray("Agi = "+a.fate(500))
-
-hema.cha  = a.maaelle('div',1/2,6/12,1/2,1/12,hema).ray("Cha = "+a.fate(500))
-
-
-hema.ability1  = a.maaelle('div',0/9,7/12,1/2,1/12,hema).ray(a.Game.ChooseAbility(hemtani,1))
-
-
-hema.ability2  = a.maaelle('div',1/2,7/12,1/2,1/12,hema).ray(a.Game.ChooseAbility(hemtani,2))
-
-
-
-hema.descriptionbox = a.maaelle('div',0/9,8/12,9/9,3/12,hema)
-
 hema.red = a.fate(255)
 hema.green = a.fate(255)
 hema.blue = a.fate(255)
 hema.color = hema.red +","+hema.green+","+hema.blue+",1"
+hema.tani  = a.maaelle('div',0/9,0/12,9/9,1/12,hema).ray(hemtani).rhapcorsa(hema.color)
+
+hema.image  = a.maaelle('div',0,1/12,1,4/12,hema).dalcorsa("Corsa/Guildmembers/"+hemtani+".png").dalcorsascroll().rhapcorsa(hema.color)
+
+
+hema.str = a.maaelle('div',0,5/12,1/2,1/12,hema).ray("Str = "+a.fate(500)).rhapcorsa(hema.color).eshe(function(){
+hema.descriptionbox.ray("Strength")
+}.bind(this))
+
+hema.int  = a.maaelle('div',1/2,5/12,1/2,1/12,hema).ray("Int = "+a.fate(500)).rhapcorsa(hema.color).eshe(function(){
+hema.descriptionbox.ray("Intelligence")
+}.bind(this))
+
+hema.agi  = a.maaelle('div',0,6/12,1/2,1/12,hema).ray("Agi = "+a.fate(500)).rhapcorsa(hema.color).eshe(function(){
+hema.descriptionbox.ray("Agility")
+}.bind(this))
+
+hema.cha  = a.maaelle('div',1/2,6/12,1/2,1/12,hema).ray("Cha = "+a.fate(500)).rhapcorsa(hema.color).eshe(function(){
+hema.descriptionbox.ray("Charisma")
+}.bind(this))
+
+
+hema.ability1  = a.maaelle('div',0/9,7/12,1/2,1/12,hema)
+hema.ability1.soul = a.Game.ChooseAbility(hemtani,1)
+hema.ability1.ray(hema.ability1.soul.tani).rhapcorsa(hema.color).eshe(function(){
+hema.descriptionbox.ray(hema.ability1.soul.desc)
+}.bind(this))
+
+
+hema.ability2  = a.maaelle('div',1/2,7/12,1/2,1/12,hema)
+hema.ability2.soul = a.Game.ChooseAbility(hemtani,2)
+hema.ability2.ray(hema.ability2.soul.tani).rhapcorsa(hema.color).eshe(function(){
+hema.descriptionbox.ray(hema.ability2.soul.desc)
+}.bind(this))
+
+
+
+hema.descriptionbox = a.maaelle('div',0/9,8/12,9/9,3/12,hema).rhapcorsa(hema.color)
+
+
 hema.rhapcorsa(hema.color)
 
+hema.select = a.maaelle('div',0/9,11/12,9/9,1/12,hema).rhapcorsa(hema.color).dalcorsa("255,255,255,0.3").ray("Select").eshe(function(){
 
+}.bind(this))
 
 
 
@@ -394,16 +413,18 @@ return hema
 a.Game.ChooseAbility = function(hemgoddess,hemsen){
 let hema = a.fate(a.Game.abilities.length)
 
-let hemap = a.Game.abilities[hema].tani
+let hemap = a.Game.abilities[hema]
 
 
 
 if(hemgoddess=="The Goddess"&&hemsen==1){
-hemap = "Galaxy Rush"
+hemap.tani = "Galaxy Rush"
+hemap.desc = "passively Double progress."
 }
 
 if(hemgoddess=="The Goddess"&&hemsen==2){
-hemap = "For the Cause"
+hemap.tani = "For the Cause"
+hemap.desc = "passively All buffs to me also affect all friendly units."
 }
 
 

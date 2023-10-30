@@ -346,7 +346,7 @@ a.Game.MaaCharacter = function(hemtani,hemano){
 let hema = a.maaelle('div',0/9,0/18,9/9,18/18,hemano)
 hema.tani  = a.maaelle('div',0/9,0/12,9/9,1/12,hema).ray(hemtani)
 
-hema.image  = a.maaelle('div',0,1/12,1,4/12,hema).dalcorsa("Corsa/Guildmembers/"+hemtani+".png")
+hema.image  = a.maaelle('div',0,1/12,1,4/12,hema).dalcorsa("Corsa/Guildmembers/"+hemtani+".png").dalcorsascroll()
 
 
 hema.str = a.maaelle('div',0,5/12,1/2,1/12,hema).ray("Str = "+a.fate(500))
@@ -358,10 +358,10 @@ hema.agi  = a.maaelle('div',0,6/12,1/2,1/12,hema).ray("Agi = "+a.fate(500))
 hema.cha  = a.maaelle('div',1/2,6/12,1/2,1/12,hema).ray("Cha = "+a.fate(500))
 
 
-hema.ability1  = a.maaelle('div',0/9,7/12,1/4,1/12,hema).ray(a.Game.ChooseAbility(hemtani,1))
+hema.ability1  = a.maaelle('div',0/9,7/12,1/2,1/12,hema).ray(a.Game.ChooseAbility(hemtani,1))
 
 
-hema.ability2  = a.maaelle('div',1/4,7/12,1/4,1/12,hema).ray(a.Game.ChooseAbility(hemtani,2))
+hema.ability2  = a.maaelle('div',1/2,7/12,1/2,1/12,hema).ray(a.Game.ChooseAbility(hemtani,2))
 
 
 
@@ -391,7 +391,7 @@ return hema
 a.Game.ChooseAbility = function(hemgoddess,hemsen){
 let hema = a.fate(a.Game.abilities.length)
 
-let hemap = a.Game.abilities[hema]
+let hemap = a.Game.abilities[hema].tani
 
 
 

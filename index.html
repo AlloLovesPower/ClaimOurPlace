@@ -325,11 +325,39 @@ a.sunmohka.ano(a.sunmohka.activeRiverLiLe)
 a.sunmohka.ano(a.sunmohka.activeRiverLiPh)
 }.bind(this))
 
-a.Game.character = a.maaelle('div',0/9,0/18,9/9,1/18).ray(a.lseall("character"))
-a.Game.optionsMohka = a.maaelle('div',0/9,6/18,9/9,12/18,a.Game)
+a.Game.characters = a.maaelle('div',0/9,0/18,9/9,7/18)
+a.Game.characters.souls = []
+a.Game.characters.hem = function(hem){
+hem.ona(hem.select)
+a.Game.options1.ona(a.Game.options1.below)
+a.Game.options2.ona(a.Game.options2.below)
+a.Game.options3.ona(a.Game.options3.below)
+a.Game.characters.ano(hem)
+hem.lo(a.Game.characters.souls.length*(1/3),0,9/9,1/3)
+a.Game.characters.souls.push(hem)
+if(a.Game.characters.souls.length<3){
+a.Game.new()
+}else{
+
+}
+}.bind(this)
+
+a.Game.optionsMohka = a.maaelle('div',0/9,8/18,9/9,7/18,a.Game)
 a.Game.options1 = a.maaelle('div',0/9,0/18,3/9,18/18,a.Game.optionsMohka).dalcorsa("0,0,0,0.7")
 a.Game.options2 = a.maaelle('div',3/9,0/18,3/9,18/18,a.Game.optionsMohka).dalcorsa("0,0,0,0.7")
 a.Game.options3 = a.maaelle('div',6/9,0/18,3/9,18/18,a.Game.optionsMohka).dalcorsa("0,0,0,0.7")
+
+a.Game.options1.select = a.maaelle('div',0/9,15/18,3/9,1/18,a.Game).dalcorsa("255,255,255,0.3").ray("Select").eshe(function(){
+a.Game.characters.hem(a.Game.options1.below)
+}.bind(this))
+
+a.Game.options2.select = a.maaelle('div',3/9,15/18,3/9,1/18,a.Game).dalcorsa("255,255,255,0.3").ray("Select").eshe(function(){
+a.Game.characters.hem(a.Game.options2.below)
+}.bind(this))
+
+a.Game.options3.select = a.maaelle('div',6/9,15/18,3/9,1/18,a.Game).dalcorsa("255,255,255,0.3").ray("Select").eshe(function(){
+a.Game.characters.hem(a.Game.options3.below)
+}.bind(this))
 
 a.Game.new = function(){
 let choice1 = a.fate(a.GuildMembers.length)
@@ -344,40 +372,43 @@ a.Game.MaaCharacter(a.GuildMembers[choice3],a.Game.options3)
 
 a.Game.MaaCharacter = function(hemtani,hemano){
 let hema = a.maaelle('div',0/9,0/18,9/9,18/18,hemano)
+hema.above = hemano
+hemano.below = hema
+
 hema.red = a.fate(255)
 hema.green = a.fate(255)
 hema.blue = a.fate(255)
 hema.color = hema.red +","+hema.green+","+hema.blue+",1"
-hema.tani  = a.maaelle('div',0/9,0/12,9/9,1/12,hema).ray(hemtani).rhapcorsa(hema.color)
+hema.tani  = a.maaelle('div',0/9,0/12,9/9,1/7,hema).ray(hemtani).rhapcorsa(hema.color)
 
-hema.image  = a.maaelle('div',0,1/12,1,4/12,hema).dalcorsa("Corsa/Guildmembers/"+hemtani+".png").dalcorsascroll().rhapcorsa(hema.color)
+hema.image  = a.maaelle('div',0,1/7,1,2/7,hema).dalcorsa("Corsa/Guildmembers/"+hemtani+".png").dalcorsascroll().rhapcorsa(hema.color)
 
 
-hema.str = a.maaelle('div',0,5/12,1/2,1/12,hema).ray("Str = "+a.fate(500)).rhapcorsa(hema.color).eshe(function(){
+hema.str = a.maaelle('div',0,3/7,1/2,1/7,hema).ray("Str = "+a.fate(500)).rhapcorsa(hema.color).eshe(function(){
 hema.descriptionbox.ray("Strength")
 }.bind(this))
 
-hema.int  = a.maaelle('div',1/2,5/12,1/2,1/12,hema).ray("Int = "+a.fate(500)).rhapcorsa(hema.color).eshe(function(){
+hema.int  = a.maaelle('div',1/2,3/7,1/2,1/7,hema).ray("Int = "+a.fate(500)).rhapcorsa(hema.color).eshe(function(){
 hema.descriptionbox.ray("Intelligence")
 }.bind(this))
 
-hema.agi  = a.maaelle('div',0,6/12,1/2,1/12,hema).ray("Agi = "+a.fate(500)).rhapcorsa(hema.color).eshe(function(){
+hema.agi  = a.maaelle('div',0,4/7,1/2,1/7,hema).ray("Agi = "+a.fate(500)).rhapcorsa(hema.color).eshe(function(){
 hema.descriptionbox.ray("Agility")
 }.bind(this))
 
-hema.cha  = a.maaelle('div',1/2,6/12,1/2,1/12,hema).ray("Cha = "+a.fate(500)).rhapcorsa(hema.color).eshe(function(){
+hema.cha  = a.maaelle('div',1/2,4/7,1/2,1/7,hema).ray("Cha = "+a.fate(500)).rhapcorsa(hema.color).eshe(function(){
 hema.descriptionbox.ray("Charisma")
 }.bind(this))
 
 
-hema.ability1  = a.maaelle('div',0/9,7/12,1/2,1/12,hema)
+hema.ability1  = a.maaelle('div',0/9,5/7,1/2,1/7,hema)
 hema.ability1.soul = a.Game.ChooseAbility(hemtani,1)
 hema.ability1.ray(hema.ability1.soul.tani).rhapcorsa(hema.color).eshe(function(){
 hema.descriptionbox.ray(hema.ability1.soul.desc)
 }.bind(this))
 
 
-hema.ability2  = a.maaelle('div',1/2,7/12,1/2,1/12,hema)
+hema.ability2  = a.maaelle('div',1/2,5/7,1/2,1/7,hema)
 hema.ability2.soul = a.Game.ChooseAbility(hemtani,2)
 hema.ability2.ray(hema.ability2.soul.tani).rhapcorsa(hema.color).eshe(function(){
 hema.descriptionbox.ray(hema.ability2.soul.desc)
@@ -385,15 +416,10 @@ hema.descriptionbox.ray(hema.ability2.soul.desc)
 
 
 
-hema.descriptionbox = a.maaelle('div',0/9,8/12,9/9,3/12,hema).rhapcorsa(hema.color)
+hema.descriptionbox = a.maaelle('div',0/9,6/7,9/9,1/7,hema).rhapcorsa(hema.color)
 
 
 hema.rhapcorsa(hema.color)
-
-hema.select = a.maaelle('div',0/9,11/12,9/9,1/12,hema).rhapcorsa(hema.color).dalcorsa("255,255,255,0.3").ray("Select").eshe(function(){
-
-}.bind(this))
-
 
 
 return hema

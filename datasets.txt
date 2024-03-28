@@ -1,0 +1,40 @@
+_wildcards_keywords = {import:fusion-t2i-wildcards-keywords}
+_nsfw_keywords = {import:fusion-t2i-nsfw-letterwords-keywords}
+_lyrics_keywords = {import:fusion-t2i-lyrics-letterwords-keywords}
+commentsPlugin = {import:comments-plugin}
+
+
+_folders
+  _wildcards = {import:fusion-t2i-wildcards-trimmed}
+  _common = {import:fusion-sd15-clip-tokens-common}
+  _average = {import:fusion-sd15-clip-tokens-average}
+  _rare = {import:fusion-sd15-clip-tokens-rare}
+  _weird = {import:fusion-sd15-clip-tokens-weird}
+  _exotic = {import:fusion-sd15-clip-tokens-exotic}
+  _prepositions = {import:fusion-t2i-prepositions}
+  _names = {import:fusion-t2i-nsfw-names}
+  _nsfw_3 = {import:fusion-t2i-nsfw-letterwords-3}
+  _nsfw_4 = {import:fusion-t2i-nsfw-letterwords-4}
+  _nsfw_5 = {import:fusion-t2i-nsfw-letterwords-5}
+  _nsfw_6 = {import:fusion-t2i-nsfw-letterwords-6}
+  _nsfw_7 = {import:fusion-t2i-nsfw-letterwords-7}
+  _nsfw_8 = {import:fusion-t2i-nsfw-letterwords-8}
+  _nsfw_9 = {import:fusion-t2i-nsfw-letterwords-9}
+  _nsfw_10 = {import:fusion-t2i-nsfw-letterwords-10}
+  _nsfw_11 = {import:fusion-t2i-nsfw-letterwords-11}
+  _nsfw_12 = {import:fusion-t2i-nsfw-letterwords-12}
+  _nsfw_13 = {import:fusion-t2i-nsfw-letterwords-13}
+  _nsfw_14 = {import:fusion-t2i-nsfw-letterwords-14}
+  _nsfw_15 = {import:fusion-t2i-nsfw-letterwords-15}
+  _nsfw_16 = {import:fusion-t2i-nsfw-letterwords-16}
+  _nsfw_17 = {import:fusion-t2i-nsfw-letterwords-17}
+  _nsfw_18 = {import:fusion-t2i-nsfw-letterwords-18}
+  _lyrics_1 = {import:fusion-t2i-lyrics-letterwords-1}
+  _lyrics_2 = {import:fusion-t2i-lyrics-letterwords-2}
+
+//_lyrics_3 = {import:fusion-t2i-lyrics-letterwords-3}
+
+
+//  _nsfw_19 = {import:fusion-t2i-nsfw-letterwords-19}
+//  _nsfw_20 = {import:fusion-t2i-nsfw-letterwords-20}
+//  _nsfw_21 = {import:fusion-t2i-nsfw-letterwords-21}
